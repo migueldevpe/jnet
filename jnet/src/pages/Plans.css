@@ -1,0 +1,14 @@
+div#plans {
+  padding: 4rem 2rem;
+}
+
+div.plans-cards-content {
+  grid-template-columns: repeat(3, minmax(150px, 240px));
+  align-items: stretch;
+}
+
+@media (max-width: 768px) {
+  div.plans-cards-content {
+    grid-template-columns: repeat(2, minmax(150px, 240px));
+  }
+}
