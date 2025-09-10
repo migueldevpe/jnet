@@ -1,0 +1,9 @@
+div#doubts {
+  padding: 4rem 2rem;
+}
+
+@media (max-width: 768px) {
+  div#doubts {
+    padding: 4rem 1.5rem;
+  }
+}

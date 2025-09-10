@@ -1,6 +1,7 @@
-import WhatsApp from "../components/WhatsApp";
-import Background from "../pages/Background";
-import Plans from "../pages/Plans";
+import WhatsApp from "../components/WhatsApp.tsx";
+import Doubts from "../pages/Doubts.tsx";
+import Background from "../pages/HomeBackground.tsx";
+import Plans from "../pages/Plans.tsx";
 import "./DefaultLayout.css";
 
 export default function DefaultLayout() {
@@ -9,6 +10,7 @@ export default function DefaultLayout() {
     <main className="flex items-center flex-col w-full">
       <Background />
       <Plans />
+      <Doubts />
       <WhatsApp />
     </main>
   )

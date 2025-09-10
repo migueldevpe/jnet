@@ -1,0 +1,136 @@
+@keyframes wiggleUp {
+  0% { transform: rotate(0deg); }
+  60% { transform: rotate(190deg); }
+  80% { transform: rotate(175deg); }
+  100% { transform: rotate(180deg); }
+}
+
+@keyframes wiggleDown {
+  0% { transform: rotate(180deg); }
+  60% { transform: rotate(-10deg); }
+  80% { transform: rotate(5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* @keyframes wiggleShake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(10deg); }
+  50% { transform: rotate(-10deg); }
+  75% { transform: rotate(6deg); }
+  100% { transform: rotate(0deg); }
+} */
+
+div.accordion-content {
+  flex-direction: column;
+  gap: .25rem;
+
+  width: 100%;
+}
+
+div.accordion-root.active span.accordion-open {
+  animation: wiggleUp .65s ease-in-out forwards;
+  transform: rotate(0deg);
+}
+
+div.accordion-root.closing span.accordion-open {
+  animation: wiggleDown .65s ease-in-out forwards;
+  transform: rotate(180deg);
+}
+
+/* div.accordion-root:not(.active):not(.closing):hover span.accordion-open {
+  animation: wiggleShake .3s ease-in-out forwards;
+} */
+
+div.accordion-root {
+  &:hover {
+    button.accordion-header {
+      background-color: #F3F4F6 !important;
+    }
+  }
+}
+
+button.accordion-header {
+  background-color: #F9FAFB;
+  color: #000;
+
+  border: 1px solid #E5E7EB;
+  border-radius: 5px;
+  
+  cursor: pointer;
+
+  width: 100%;
+
+  padding: .8rem;
+  transition: background-color, .3s ease-in-out, border-radius 1.25s ease-in-out;
+}
+
+button.accordion-header > span {
+  transition: color .3s ease-in-out;
+}
+
+span.accordion-open {
+  font-size: 1.2rem;
+}
+
+div.accordion-body {
+  position: relative;
+
+  gap: 1rem;
+
+  background-color: #fefefe;
+  color: #000;
+
+  border: 1px solid #E5E7EB;
+  border-radius: 0 0 5px 5px;
+
+  visibility: hidden;
+  overflow: hidden;
+
+  max-height: 0;
+  width: 100%;
+
+  padding: 0 1.2rem;
+  transition: max-height .5s ease-in-out, padding .5s ease-in-out, visibility .45s ease-in-out;
+}
+
+div.accordion-root.active {
+  div.accordion-body {
+    visibility: visible;
+
+    max-height: 1000px;
+
+    padding: 1.2rem;
+    transition: background-color .3s ease-in-out, max-height .5s ease-in-out, padding .5s ease-in-out, visibility .5s ease-in-out;
+  }
+
+  button.accordion-header  {
+    background-color: #E5E7EB;
+
+    border-radius: 5px 5px 0 0;
+    transition: background-color .3s ease-in-out, border-radius 0s ease-in-out;
+  }
+}
+
+div.accordion-body h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: color .3s ease-in-out;
+}
+
+div.accordion-body p {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  line-height: 1.2em;
+  text-align: justify;
+  transition: color .3s ease-in-out;
+}
+
+div.accordion-body p strong {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  line-height: 1.2em;
+}
+
+@media (max-width: 768px) {
+  div.accordion-content {
+    max-width: 100%;
+  }
+}

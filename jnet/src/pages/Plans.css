@@ -29,6 +29,7 @@ div.plans-cards-content {
   div.plans-cards-content {
     grid-template-columns: repeat(1, minmax(0, 1fr));
     justify-content: center;
+    gap: 1.5rem;
   }
 
   div.plans-cards-content > :last-child {
