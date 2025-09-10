@@ -3,12 +3,38 @@ div#plans {
 }
 
 div.plans-cards-content {
-  grid-template-columns: repeat(3, minmax(150px, 240px));
+  grid-template-columns: repeat(3, minmax(0, 240px));
   align-items: stretch;
 }
 
 @media (max-width: 768px) {
+  div#plans {
+    padding: 4rem 1.5rem;
+  }
+
   div.plans-cards-content {
-    grid-template-columns: repeat(2, minmax(150px, 240px));
+    grid-template-columns: repeat(2, minmax(0, 240px));
+    justify-content: center;
+  }
+
+  div.plans-cards-content > :last-child {
+    display: grid;
+    grid-template-areas: "a";
+    grid-column: 1/-1;
+    justify-self: center;
+  }
+}
+
+@media (max-width: 500px) {
+  div.plans-cards-content {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    justify-content: center;
+  }
+
+  div.plans-cards-content > :last-child {
+    display: unset;
+    grid-template-areas: unset;
+    grid-column: unset;
+    justify-self: unset;
   }
 }

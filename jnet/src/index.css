@@ -22,3 +22,9 @@ body {
 div.bg-s {
   padding: 0 2rem;
 }
+
+@media (max-width: 768px) {
+  div.bg-s {
+    padding: 0 1.5rem;
+  }
+}

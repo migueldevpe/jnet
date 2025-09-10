@@ -11,7 +11,7 @@ export default function Plans() {
         <div className="plans-content flex flex-col gap-14 w-full">
           <div className="w-full">
             <h1 className="text-3xl font-semibold !mb-2">Confira os nossos planos</h1>
-            <p>Escolher o plano de internet certo faz toda a diferença no dia a dia. Pensando nisso, montamos opções que atendem desde quem só precisa navegar e assistir vídeos, até quem busca máxima performance para jogos, trabalho remoto e streaming em alta qualidade. Confira abaixo o plano ideal para você ou sua família.</p>
+            <p className="!leading-4.75">Escolher o plano de internet certo faz toda a diferença no dia a dia. Pensando nisso, montamos opções que atendem desde quem só precisa navegar e assistir vídeos, até quem busca máxima performance para jogos, trabalho remoto e streaming em alta qualidade. Confira abaixo o plano ideal para você ou sua família.</p>
           </div>
           <div className="plans-cards-content grid gap-2 w-full">
             <Card 
@@ -67,7 +67,7 @@ export default function Plans() {
             </Card>
           </div>
           <div>
-            <p>Ainda está em dúvida sobre qual plano contratar? Vá até a <a className="text-[#0066cc] hover:underline" href="#help" target="_parent" rel="referrer">seção de dúvidas</a>, ou contate a nossa equipe de suporte que está pronta para te ajudar a escolher a melhor opção para o seu perfil de uso. Fale conosco pelo WhatsApp ou entre em contato pelos nossos <a className="text-[#0066cc] hover:underline" href="#contact" target="_parent" rel="referrer">canais de atendimento</a> — vamos tirar todas as suas dúvidas e garantir que você tenha a melhor experiência online.</p>
+            <p className="!leading-4.75">Ainda está em dúvida sobre qual plano contratar? Vá até a <a className="text-[#0066cc] hover:underline" href="#help" target="_parent" rel="referrer">seção de dúvidas</a>, ou contate a nossa equipe de suporte que está pronta para te ajudar a escolher a melhor opção para o seu perfil de uso. Fale conosco pelo WhatsApp ou entre em contato pelos nossos <a className="text-[#0066cc] hover:underline" href="#contact" target="_parent" rel="referrer">canais de atendimento</a> — vamos tirar todas as suas dúvidas e garantir que você tenha a melhor experiência online.</p>
           </div>
         </div>
       </section>
