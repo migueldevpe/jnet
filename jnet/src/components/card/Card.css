@@ -3,18 +3,17 @@ div.card {
   border-radius: 25px;
   border: 2px solid var(--border-card-color); 
 
-  box-shadow: 0 0 15px #0000001a;
+  box-shadow: 0 0 1rem #0000000d;
 
   max-height: 450px;
   width: 100%;
   max-width: 240px;
 
-  z-index: 2;
+  z-index: 0;
   transition: transform .5s ease-in-out;
 
   &:hover {
     transform: scale(1.02);
-    z-index: 3;
 
     svg.card-star {
       transform: translate(0, -10px) scale(6);
@@ -33,12 +32,10 @@ div.card img {
   min-width: 280px;
   max-width: 335px;
   aspect-ratio: 500 / 450;
-
-  z-index: 5;
 }
 
 div.wrapper-img {
-  display: none;
+  display: block;
 }
 
 a.choose-plan {
@@ -75,6 +72,8 @@ svg.jnet-icon {
 
   opacity: .4;
 
+  z-index: 5;
+
   font-size: 5rem;
 }
 
@@ -87,11 +86,7 @@ svg.card-star {
     max-width: 100%;
   }
 
-  div.card img {
-    display: block;
-  }
-
-  div.wrapper-img {
+  div.wrapper-img img {
     display: block;
   }
 }

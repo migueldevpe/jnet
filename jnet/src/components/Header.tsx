@@ -1,23 +1,68 @@
 import { AiOutlineGlobal } from "react-icons/ai";
 import "./Header.css";
+//import { useEffect } from "react";
 
 export default function Header() {
+  function openMenu() {
+    const ocMenu = document.getElementById('mobile-menu') as HTMLButtonElement;
+    const menu = document.getElementById('menu') as HTMLElement;
+
+    menu.classList.toggle('show');
+
+    if (ocMenu.classList.contains('active')) {
+      ocMenu.classList.remove('active');
+      ocMenu.classList.add('closing');
+
+      setTimeout(() => {
+        ocMenu.classList.remove('closing');
+      }, 500)
+    } else {
+      ocMenu.classList.remove('closing')
+      ocMenu.classList.add('active');
+    }
+  };
+
+/*useEffect(() => {
+  const ocMenu = document.getElementById('mobile-menu') as HTMLButtonElement;
+  const menu = document.getElementById('menu') as HTMLElement;
+
+  ocMenu.onclick = () => {
+
+  menu.classList.toggle('show');
+
+    if (ocMenu.classList.contains('active')) {
+      ocMenu.classList.remove('active');
+      ocMenu.classList.add('closing');
+
+      setTimeout(() => {
+        ocMenu.classList.remove('closing');
+      }, 500)
+    } else {
+      ocMenu.classList.remove('closing')
+      ocMenu.classList.add('active');
+    };
+  };
+}, []);*/
 
   return (
-    <header className="flex flex-col items-center justify-center w-full !mt-[40px] z-1">
-      <nav className="flex items-center justify-center fixed top-0 w-full h-[40px] bg-[#005dfe] text-white !px-4 z-5">
-        <div className="flex flex-row justify-between w-full max-w-[1000px]">
-          <span className="flex flex-row gap-1.5"><AiOutlineGlobal />JNet</span>
-          <ul className="flex flex-row gap-4">
-            <li><a href="#">Início</a></li>
-            <li><a href="#plans">Planos</a></li>
-            <li><a href="#doubts">Dúvidas</a></li>
-            <li><a href="#">Contato</a></li>
+    <header className="flex flex-col items-center justify-center w-full !mt-[40px]">
+      <div className="header-content flex items-center justify-center fixed top-0 w-full h-[40px] bg-[#005dfe] text-white !px-3 z-10">
+        <nav className="flex flex-row items-center justify-between relative h-full w-full max-w-[1000px] {bg-[#005dfe]}">
+          <span className="flex flex-row gap-1.5"><AiOutlineGlobal />JNet — Pernambuco</span>
+          <button title="Menu" id="mobile-menu" className="flex items-center justify-center flex-col" onClick={openMenu}>
+            <div className="line-top"></div>
+            <div className="line-middle"></div>
+            <div className="line-bottom"></div>
+          </button>
+          <ul id="menu" className="flex flex-row gap-4 z-[-1]">
+            <li onClick={openMenu}><a href="#home">Início</a></li>
+            <li onClick={openMenu}><a href="#plans">Planos</a></li>
+            <li onClick={openMenu}><a href="#contact">Contato</a></li>
+            <li onClick={openMenu}><a href="#doubts">Dúvidas</a></li>
           </ul>
-        </div>
-      </nav>
+        </nav>
+      </div>
       <div className="w-full h-[80px] bg-gray-200">
-        
       </div>
     </header>
   )

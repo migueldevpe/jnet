@@ -3,6 +3,8 @@ a.whatsapp {
 
   border-radius: 9999px;
 
+  box-shadow: 0 0 1rem #0000000d;
+
   overflow: hidden;
 
   cursor: pointer;
@@ -26,9 +28,9 @@ a.whatsapp:hover > span {
   width: max-content;
   max-width: 500px;
 
-  padding-right: .5rem;
-  padding-left: .5rem;
-  /* padding: unset; */
+  /* padding-right: .5rem;
+  padding-left: .5rem; */
+  padding: .5rem;
 
   visibility: visible;
 }

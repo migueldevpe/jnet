@@ -42,6 +42,8 @@ div.accordion-root.closing span.accordion-open {
 } */
 
 div.accordion-root {
+  box-shadow: 0 0 1rem #0000000d;
+
   &:hover {
     button.accordion-header {
       background-color: #F3F4F6 !important;
@@ -129,8 +131,8 @@ div.accordion-body p strong {
   line-height: 1.2em;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   div.accordion-content {
     max-width: 100%;
   }
-}
+} */

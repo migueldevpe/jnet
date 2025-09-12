@@ -12,7 +12,7 @@ export default function Plans() {
   return (
     <div id="plans" className="bg-s flex justify-center w-full bg-gray-200">
       <section className="w-full max-w-[1000px]">
-        <div className="plans-content flex flex-col gap-14 w-full">
+        <div className="plans-content flex flex-col gap-12 w-full">
           <div className="w-full">
             <h1 className="text-3xl font-semibold !mb-2">Confira os nossos planos</h1>
             <p className="text-justify !leading-4.75">Escolher o plano de internet certo faz toda a diferença no dia a dia. Pensando nisso, montamos opções que atendem desde quem só precisa navegar e assistir vídeos, até quem busca máxima performance para jogos, trabalho remoto e streaming em alta qualidade. Confira abaixo o plano ideal para você ou sua família.</p>

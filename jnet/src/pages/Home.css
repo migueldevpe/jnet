@@ -1,0 +1,28 @@
+div#home {
+  scroll-margin-top: 120px;
+}
+
+div.bg-s:nth-child(1) {
+  padding: unset;
+}
+
+div.home-bg {
+  background-image: linear-gradient(45deg, #0041ff, #005dfe);
+  background-size: cover;
+
+  border-top: 2px solid #808080;
+  border-bottom: 2px solid #808080;
+}
+
+div.wallpaper {
+  /* background-image: url(https://img.freepik.com/premium-photo/internet-things-background_34629-827.jpg); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  aspect-ratio: 626 / 352;
+}
+
+section.home-text-bg {
+  padding: clamp(1.5rem, 4vh, 2rem) 0;
+}

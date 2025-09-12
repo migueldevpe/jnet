@@ -1,5 +1,7 @@
 div#plans {
-  padding: 4rem 2rem;
+  padding: var(--padding-section-y) 2rem;
+
+  scroll-margin-top: 40px;
 }
 
 div.plans-cards-content {
@@ -9,7 +11,11 @@ div.plans-cards-content {
 
 @media (max-width: 768px) {
   div#plans {
-    padding: 4rem 1.5rem;
+    padding: var(--padding-section-y) 1.5rem;
+  }
+
+  div.plans-content {
+    gap: 2.5rem;
   }
 
   div.plans-cards-content {

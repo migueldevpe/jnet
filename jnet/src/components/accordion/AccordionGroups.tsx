@@ -9,7 +9,7 @@ export default function AccordionGroup() {
     { title: "Como funciona o serviço?",  
       children: (
         <>
-          <h2>Vamos lá,</h2>
+          <h2>Vamos lá.</h2>
           <p>Nosso serviço é totalmente online e foi desenvolvido para simplificar sua rotina. Após escolher o plano ideal, você terá acesso imediato a todas as funcionalidades, podendo gerenciar suas atividades de forma intuitiva. Além disso, nossa plataforma é constantemente atualizada para oferecer a melhor experiência possível, garantindo rapidez, segurança e praticidade no seu dia a dia.</p>
         </>
       )
@@ -17,7 +17,7 @@ export default function AccordionGroup() {
     { title: "Quais formas de pagamento são aceitas?", 
       children: (
         <>
-          <h2>Não se preocupe,</h2>
+          <h2>Não se preocupe.</h2>
           <p>Aceitamos cartões de crédito, débito, boleto bancário e transferências. Todos os pagamentos são processados de forma segura, utilizando criptografia de ponta. Além disso, você recebe confirmação imediata e acesso automático ao serviço após a aprovação do pagamento.</p>       
         </>
       )
