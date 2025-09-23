@@ -21,7 +21,7 @@ export default function Card({ children, label="-", title="MEGA", desc="-", list
 
   return (
     <div className="card flex flex-col relative bg-gray-50" style={others_style}>
-      <div className="wrapper-img absolute inset-0 overflow-hidden rounded-[20px] z-0">
+      <div className="wrapper-img absolute inset-0 overflow-hidden rounded-[20px] pointer-events-none">
         <AiOutlineGlobal className="jnet-icon text-[#646466]"/> {/* <- TALVEZ EU REMOVA ISSO */}
         {children}
         <div className="relative inset-0 h-full w-full">
@@ -36,7 +36,7 @@ export default function Card({ children, label="-", title="MEGA", desc="-", list
           </Tooltip>                  
         </div>
       </div>
-      <div className="flex flex-col gap-8 !p-4 !pt-0 !px-5 z-1">
+      <div className="flex flex-col gap-8 !p-4 !pt-0 !px-5 drop-shadow-sm drop-shadow-white">
         <div className="relative">
           <h2 className="text-[#0d194f] text-[2rem] uppercase font-bold tracking-tight">{title}</h2>
           <h3 className="flex flex-row gap-1 text-[#646466] text-sm"><MdWifiTethering />{desc}</h3>
@@ -54,7 +54,7 @@ export default function Card({ children, label="-", title="MEGA", desc="-", list
         </Tooltip>
         </span>
       </div>
-      <a className="choose-plan flex items-center justify-center flex-1 w-full self-center text-2xl font-semibold text-[1.25rem] z-0" title="Ir para WhatsApp." href="#" target="" rel=""><span>Assinar plano</span></a>
+      <a className="choose-plan flex items-center justify-center flex-1 w-full self-center text-2xl font-semibold text-[1.25rem]" title="Ir para WhatsApp." href="#" target="" rel=""><span>Assinar plano</span></a>
     </div>
   )
 

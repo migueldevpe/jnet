@@ -108,6 +108,10 @@ ul#menu {
   z-index: unset;
 }
 
+li.menu-contact  {
+  display: none;
+}
+
 @media (max-width: 500px) {
     button#mobile-menu {
     display: flex;
@@ -174,21 +178,24 @@ ul#menu {
   ul#menu {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     flex-direction: column;
     gap: unset;
 
     position: absolute;
-    top: 45px;
-    right: -10rem;
+    top: 38px;
+    right: -20rem;
 
-    background-color: #005dfef2;
+    height: 200dvh;
+
+    background-image: linear-gradient(to bottom, #005dfe, blue); /* #005dfef2 */
     backdrop-filter: blur(2px);
 
-    border-radius: 10px;
-    border: 2px solid #808080;
+    /* border-radius: 10px;
+    border: 2px solid #808080; */
+    border-left: 2px solid #808080; 
 
-    box-shadow: 0 0 1rem #00000033;
+    /* box-shadow: 0 0 1rem #00000033; */
 
     overflow: hidden;
     visibility: hidden;
@@ -197,8 +204,8 @@ ul#menu {
     transition: transform .5s ease-in-out, visibility .5s ease-in-out;
   }
 
-  ul#menu li {
-    text-align: center;
+  li.li-link {
+    text-align: start;
 
     width: 100%;
     padding: 1rem 0;
@@ -206,17 +213,39 @@ ul#menu {
     transition: background-color .3s ease-in-out;
 
     &:hover {
-      background-color: rgba(0, 75, 204, 0.75);
+      background-color: #004bcc;
     }
   }
 
-  ul#menu li a {
-    padding: 1rem 2rem;
+  li.li-link a {
+    padding: 1rem 12rem 1rem 1rem;
+  }
+
+  li.menu-contact {
+    display: flex;
+  }
+
+  li.menu-contact li {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  li.menu-contact svg {
+    background-color: dodgerblue;
+
+    border-radius: 9999px;
+
+    padding: 2px;
   }
 
   ul#menu.show {
-    transform: translateX(-10rem);
+    transform: translateX(-17em);
 
     visibility: visible;
+  }
+
+  body:has(ul#menu.show) {
+    overflow: hidden;
   }
 }

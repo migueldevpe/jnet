@@ -64,6 +64,8 @@ div.w-notification {
   visibility: visible;
   opacity: 1;
 
+  z-index: 11;
+
   padding: 2px;
 
   user-select: none;

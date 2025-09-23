@@ -25,13 +25,15 @@ div.card img {
   display: none;
 
   position: absolute;
-  right: -12%;
+  right: -5rem;
   bottom: 44px;
 
   width: 75%;
-  min-width: 280px;
+  min-width: 260px;
   max-width: 335px;
   aspect-ratio: 500 / 450;
+
+  z-index: -1;
 }
 
 div.wrapper-img {

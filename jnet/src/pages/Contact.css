@@ -1,0 +1,37 @@
+div#contact {
+  padding: var(--padding-section-y) 2rem;
+}
+
+a.contact-link {
+
+  &:hover {
+    svg {
+      background-color: #005dfe;
+
+      color: white;
+    }
+
+    span {
+      color: #005dfe;
+    }
+  }
+}
+
+a.contact-link svg {
+  background-color: transparent;
+  color: #005dfe;
+
+  border-radius: 50%;
+  border: 2px solid #005dfe;
+
+  height: 35px;
+  width: 35px;
+
+  padding: 6px;
+  transition: background-color .3s ease-in-out, color .3s ease-in-out, border .3s ease-in-out;
+}
+
+a.contact-link span {
+  color: #000;
+  transition: color .3s ease-in-out;
+}

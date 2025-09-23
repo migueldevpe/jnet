@@ -11,7 +11,7 @@ div.plans-cards-content {
 
 @media (max-width: 768px) {
   div#plans {
-    padding: var(--padding-section-y) 1.5rem;
+    padding: var(--padding-section-y) 1.2rem;
   }
 
   div.plans-content {

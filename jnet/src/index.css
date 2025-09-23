@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Rubik";
+  src: url(./assets//fonts/Rubik.woff2) format('woff2');
+  font-display: swap;
+}
+
 * {
   font-family: "Rubik", Arial, sans-serif;
   line-height: 1;
@@ -14,13 +20,16 @@
 }
 
 :root {
+  --home-title: clamp(2.8rem, 5.5vw, 3.6rem);
+  --home-subtitle: clamp(1rem, 1.975vw, 1.3rem);
+
   --padding-section-y: clamp(2rem, 8vh, 4rem);
 }
 
 body {
   min-height: 100dvh;
   width: 100%;
-  min-width: 425px;
+  min-width: 320px;
 }
 
 div.bg-s {
@@ -39,6 +48,6 @@ a.link {
   }
 
   div.bg-s {
-    padding: 0 1.5rem;
+    padding: 0 1.2rem;
   }
 }

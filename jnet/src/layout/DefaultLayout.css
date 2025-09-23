@@ -1,0 +1,22 @@
+div#overlay {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  div#overlay {
+    display: flex;
+
+    background-color: transparent;
+    backdrop-filter: blur(1px);
+
+    visibility: hidden;
+
+    transition: background-color .3s ease-in-out, backdrop-filter .3s ease-in-out, visibility .3s ease-in-out;
+  }
+
+  div#overlay.active {
+    background-color: #00000080;
+
+    visibility: visible;
+  } 
+}

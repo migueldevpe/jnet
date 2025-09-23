@@ -1,3 +1,12 @@
+@keyframes slide {
+  0%, 100% {
+    transform: translateY(-75%);
+  }
+  50% {
+    transform: translateY(-25%);
+  }
+}
+
 div#home {
   scroll-margin-top: 120px;
 }
@@ -25,4 +34,88 @@ div.wallpaper {
 
 section.home-text-bg {
   padding: clamp(1.5rem, 4vh, 2rem) 0;
+}
+
+img.bg-logo {
+  top: .5rem;
+  left: clamp(0rem, calc((1080px - 100vw) / 100px * 1rem), .5rem);
+}
+
+div.bg-text {
+  top: 50%;
+  left: clamp(0rem, calc((1080px - 100vw) / 125px * 2rem), 1.5rem);
+  transform: translate(0, -50%);
+
+  filter: drop-shadow(0 0 10px #00000080);
+}
+
+a.plans-button {
+  &:hover {
+    span.p-button-text {
+      transform: translateX(1.3rem);
+    }
+  }
+}
+
+span.p-button-text {
+  background-color: #155dfc;
+
+  border: 2px solid #ffffff5a;
+  border-radius: 10px;
+  transition: transform .4s ease-in-out;
+}
+
+svg.plans-arrow {
+  animation: slide 1s infinite;
+}
+
+@media (max-width: 768px) {
+  img.fund {
+    object-fit: cover;
+  }
+
+  img.home-img {
+    top: unset;
+    bottom: -2.6%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    height: auto;
+    min-height: 350px;
+    width: 100%;
+    max-width: 425px;
+
+    object-fit: cover;
+
+    aspect-ratio: 800 / 700;
+  }
+
+  div.bg-text {
+    top: unset;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    text-align: center;
+
+    width: 100%;
+
+    padding: 0 1.5rem;
+  }
+
+  div.bg-text h1 {
+    font-size: clamp(1.8rem, 9.35vw, 2.8rem);
+  }
+
+  a.plans-button {
+    align-self: center;
+
+    padding-left: 1.3rem;
+
+    &:hover {
+      span.p-button-text {
+        transform: unset;
+      }
+    }
+  }
 }

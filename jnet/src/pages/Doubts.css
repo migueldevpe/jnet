@@ -6,7 +6,7 @@ div#doubts {
 
 @media (max-width: 768px) {
   div#doubts {
-    padding: var(--padding-section-y) 1.5rem;
+    padding: var(--padding-section-y) 1.2rem;
   }
 
   div#doubts > section {

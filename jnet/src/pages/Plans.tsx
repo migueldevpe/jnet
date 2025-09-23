@@ -10,7 +10,7 @@ import mlk2 from "../../../outros/mlk2.webp"
 export default function Plans() {
 
   return (
-    <div id="plans" className="bg-s flex justify-center w-full bg-gray-200">
+    <div id="plans" className="bg-s flex justify-center w-full bg-gray-100">
       <section className="w-full max-w-[1000px]">
         <div className="plans-content flex flex-col gap-12 w-full">
           <div className="w-full">
