@@ -2,20 +2,20 @@ import "./Contact.css";
 
 import { MdEmail, MdLocationOn, MdPhone, MdWhatsapp } from "react-icons/md";
 
-import contactImg from "../assets/images/contact.webp";
+import contactImg from "../assets/images/testando11.webp";
 
 export default function Contact() {
 
   return (
     <div id="contact" className="bg-s flex justify-center bg-gray-100 w-full">
       <section className="flex flex-col gap-4 w-full max-w-[1000px]">
-        <div className="flex flex-row gap-20">
-          <div className="max-w-[500px]">
+        <div className="contact-root flex flex-row gap-4">
+          <div className="contact-content w-6/12">
             <div className="!mb-4">
-              <h1 className="text-3xl font-semibold !mb-1">Fale conosco</h1>
+              <h1 className="text-3xl font-semibold !mb-2">Fale conosco</h1>
               <p className="text-justify !leading-[1.2rem]">Está precisando de atendimento ou suporte? Nossa equipe está pronta para ajudar você agora mesmo! Escolha onde prefere ser atendido.</p>
             </div>
-            <div className="flex">
+            <div className="c-list flex">
               <div>
                 <ul className="flex flex-col gap-4">
                   <li><a href="" target="_blank" rel="noreferrer" className="contact-link flex items-center gap-2"><MdWhatsapp/><span className="font-medium">WhatsApp</span></a></li>
@@ -26,8 +26,8 @@ export default function Contact() {
               </div>
             </div>
           </div>
-          <div>
-            <img src={contactImg} alt="" loading="lazy" decoding="async" fetchPriority="low" className="w-full max-w-[750px] !mt-[-2rem] object-cover aspect-square pointer-events-none"/>
+          <div className="c-content-img self-center w-6/12">
+            <img src={contactImg} alt="#" loading="lazy" decoding="async" fetchPriority="low" className="c-img w-full object-cover aspect-square pointer-events-none"/>
           </div>
         </div>
       </section>

@@ -1,4 +1,5 @@
 import "./Doubts.css";
+
 import AccordionGroup from "../components/accordion/AccordionGroups.tsx";
 
 export default function Doubts() {

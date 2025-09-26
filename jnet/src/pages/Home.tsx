@@ -1,10 +1,10 @@
 import "./Home.css";
 
-import ImgLG from "../assets/images/home-men.webp"
-import ImgSM from "../assets/images/home-men-sm.webp";
-import Logo from "../assets/images/jnet-w.webp"
-import FundLG from "../assets/images/teste.webp"
-import FundSM from "../assets/images/teste2.webp"
+import ImgLG from "/hero/home-men.webp?url"
+import ImgSM from "/hero/home-men-sm.webp?url";
+import Logo from "/hero/jnet-w.webp?url"
+import FundLG from "/hero/teste.webp?url"
+import FundSM from "/hero/teste2.webp?url"
 
 import { FaArrowDown } from "react-icons/fa6";
 import { useEffect, useState } from "react";

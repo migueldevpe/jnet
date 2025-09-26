@@ -3,16 +3,18 @@ export default function closeMenu() {
   const menu = document.getElementById('menu') as HTMLElement;
   const overlay = document.getElementById('overlay') as HTMLElement;
 
-  menu.classList.toggle('show');
-  overlay.classList.toggle('active');
+  if (window.innerWidth <= 500) {
 
-  if (ocMenu.classList.contains('active')) {
-    ocMenu.classList.remove('active');
-    ocMenu.classList.add('closing');
-  } else {
-    ocMenu.classList.remove('closing');
-    ocMenu.classList.add('active');
+    menu.classList.toggle('show');
+    overlay.classList.toggle('active');
+
+    if (ocMenu.classList.contains('active')) {
+      ocMenu.classList.remove('active');
+      ocMenu.classList.add('closing');
+    } else {
+      ocMenu.classList.remove('closing');
+      ocMenu.classList.add('active');
+    }
+
   }
-
-  return closeMenu();
-};
+}

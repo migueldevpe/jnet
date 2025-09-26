@@ -2,6 +2,10 @@ div#contact {
   padding: var(--padding-section-y) 2rem;
 }
 
+img.c-img {
+  margin-top: -2%;
+}
+
 a.contact-link {
 
   &:hover {
@@ -34,4 +38,33 @@ a.contact-link svg {
 a.contact-link span {
   color: #000;
   transition: color .3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  div#contact {
+    padding: var(--padding-section-y) 1.2rem;
+  }
+
+  div.contact-root {
+    flex-direction: column;
+  }
+  
+  div.contact-content {
+    width: 100%;
+  }
+
+  div.c-list,
+  div.c-list div,
+  div.c-content-img {
+    width: 100%;
+  }
+
+  /* div.c-content-img {
+    width: 100%;
+  } */
+
+  img.c-img {
+    max-width: 375px;
+    margin: auto;
+  }
 }
