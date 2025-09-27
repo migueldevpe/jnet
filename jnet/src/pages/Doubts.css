@@ -10,6 +10,6 @@ div#doubts {
   }
 
   div#doubts > section {
-    gap: 2.5rem;
+    gap: 2rem;
   }
 }

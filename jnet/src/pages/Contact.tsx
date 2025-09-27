@@ -18,10 +18,10 @@ export default function Contact() {
             <div className="c-list flex">
               <div>
                 <ul className="flex flex-col gap-4">
-                  <li><a href="" target="_blank" rel="noreferrer" className="contact-link flex items-center gap-2"><MdWhatsapp/><span className="font-medium">WhatsApp</span></a></li>
-                  <li><a href="" target="_blank" rel="noreferrer" className="contact-link flex items-center gap-2"><MdPhone/><span className="font-medium">(81) 9 8888-9999</span></a></li>
-                  <li><a href="" target="_blank" rel="noreferrer" className="contact-link flex items-center gap-2"><MdEmail/><span className="font-medium">jnet.contato@hotmail.com</span></a></li>
-                  <li><a href="" target="_blank" rel="noreferrer" className="contact-link flex items-center gap-2"><MdLocationOn/><span className="font-medium">Rua X, № X</span></a></li>
+                  <li><a href="" target="_blank" rel="noreferrer" className="contact-l flex items-center gap-2"><MdWhatsapp/><span className="font-medium">WhatsApp</span></a></li>
+                  <li><a href="" target="_blank" rel="noreferrer" className="contact-l flex items-center gap-2"><MdPhone/><span className="font-medium">(81) 9 8888-9999</span></a></li>
+                  <li><a href="" target="_blank" rel="noreferrer" className="contact-l flex items-center gap-2"><MdEmail/><span className="font-medium">jnet.contato@hotmail.com</span></a></li>
+                  <li><a href="" target="_blank" rel="noreferrer" className="contact-l flex items-center gap-2"><MdLocationOn/><span className="font-medium">Rua X, № X</span></a></li>
                 </ul>
               </div>
             </div>

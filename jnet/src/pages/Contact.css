@@ -6,7 +6,7 @@ img.c-img {
   margin-top: -2%;
 }
 
-a.contact-link {
+a.contact-l {
 
   &:hover {
     svg {
@@ -21,7 +21,7 @@ a.contact-link {
   }
 }
 
-a.contact-link svg {
+a.contact-l svg {
   background-color: transparent;
   color: #005dfe;
 
@@ -35,7 +35,7 @@ a.contact-link svg {
   transition: background-color .3s ease-in-out, color .3s ease-in-out, border .3s ease-in-out;
 }
 
-a.contact-link span {
+a.contact-l span {
   color: #000;
   transition: color .3s ease-in-out;
 }

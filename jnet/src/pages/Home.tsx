@@ -52,9 +52,14 @@ export default function Background() {
           </div>
         </section>
       </div>
-      <div className="bg-s flex justify-center w-full bg-gray-100 !mb-10">
+      <div className="bg-s flex justify-center w-full bg-gray-100">
         <section className="home-text-bg bg-s w-full max-w-[1000px]">
           <p className="text-justify text-sm !leading-4.75">Na JNet, acreditamos que internet de qualidade deve ser simples, estável e acessível. Oferecemos planos rápidos, suporte ágil e tecnologia de ponta para manter você sempre online — seja para trabalhar, estudar ou se divertir.</p>
+        </section>
+      </div>
+      <div className="bg-s flex justify-center w-full h-10">
+        <section className="home-text-bg bg-s w-full max-w-[1000px]">
+
         </section>
       </div>
     </div>
