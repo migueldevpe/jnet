@@ -1,8 +1,12 @@
-import { AiOutlineGlobal } from "react-icons/ai";
 import "./Header.css";
-import { MdEmail, MdPhone } from "react-icons/md";
 
 import useCloseMenu from "../hooks/useCloseMenu";
+import Logo from "/hero/jnet-w.webp?url"
+
+import { IoChatbubblesSharp } from "react-icons/io5";
+import { HiPhone } from "react-icons/hi";
+import { MdEmail, MdPhone } from "react-icons/md";
+import { AiOutlineGlobal } from "react-icons/ai";
 //import { useEffect } from "react";
 
 export default function Header() {
@@ -39,7 +43,7 @@ export default function Header() {
             <div className="line-middle"></div>
             <div className="line-bottom"></div>
           </button>
-          <ul id="menu" className="flex flex-row gap-4 z-[-1]">
+          <ul id="menu" className="flex flex-row gap-4 h-full z-[-1]">
             <li onClick={useCloseMenu} className="li-link"><a href="#home">Início</a></li>
             <li onClick={useCloseMenu} className="li-link"><a href="#plans">Planos</a></li>
             <li onClick={useCloseMenu} className="li-link"><a href="#doubts">Dúvidas</a></li>
@@ -53,8 +57,18 @@ export default function Header() {
           </ul>
         </nav>
       </div>
-      <div className="w-full h-[65px]">
-      </div>
+      <aside className="h-aside flex items-center justify-center w-full h-[65px]">
+        <div className="flex items-center justify-between h-full w-full max-w-[1000px]">
+          <div className="flex items-center h-full">
+            <img src={Logo} alt="" loading="eager" decoding="sync" fetchPriority="high" className="bg-logo pointer-events-none"/>
+            <span className="text-[1.25rem] !font-sans !font-semibold tracking-tighter !leading-none"></span>
+          </div>
+          <div className="h-aside-nav flex gap-2.5">
+            <a href="tel:+5581988889999" target="_blank" rel="noreferrer" className="sm:hidden flex items-center gap-1 h-full"><HiPhone /><span>Ligar</span></a>
+            <a href="https://www.whatsapp.com" target="_blank" rel="noreferrer" className="flex items-center gap-1 h-full"><IoChatbubblesSharp /><span>Atendimento ágil</span></a>
+          </div>
+        </div>
+      </aside>
     </header>
   )
 

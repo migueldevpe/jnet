@@ -23,24 +23,21 @@ export default function Footer() {
                 </ul>
               </div>
               <div>
-                <h1 className="font-semibold">Contatos</h1>
+                <h1 className="font-semibold">Redes sociais</h1>
                 <ul className="flex flex-col gap-2 !mt-2">
-                  <li>WhatsApp</li>
                   <li>Instagram</li>
-                  <li>(81) 9 8888-9999</li>
-                  <li>jnet.contato@hotmail.com</li>
-                  <li>Rua X, № X</li>
                 </ul>              
               </div>      
-              {/* <div>
-                <ul>
-                  
+              <div>
+                <h1 className="font-semibold">Endereço</h1>
+                <ul className="!mt-2">
+                  <li>Rua X, № X</li>
                 </ul>              
-              </div>       */}
+              </div>
             </div>
           </div>
           <div className="f-label flex items-center justify-between flex-row text-sm w-full">
-            <span className="flex items-center flex-row gap-2"><AiOutlineGlobal />JNet — Pernambuco</span>
+            <span className="flex items-center flex-row gap-1.5"><AiOutlineGlobal />JNet — Pernambuco</span>
             <p>© 2025 - Todos os direitos reservados.</p>
           </div>
         </div>

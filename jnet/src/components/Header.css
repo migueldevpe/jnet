@@ -108,12 +108,40 @@ ul#menu {
   z-index: unset;
 }
 
+aside.h-aside {
+  padding: 0 .75rem;
+}
+
+img.bg-logo {
+  height: 55px;
+  width: 55px;
+
+  filter: brightness(0);
+}
+
 li.menu-contact  {
   display: none;
 }
 
+li.li-link {
+  height: 100%;
+}
+
+li.li-link a {
+  display: flex;
+  align-items: center;
+
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  div.h-aside-nav {
+    font-size: .875rem;
+  }
+}
+
 @media (max-width: 500px) {
-    button#mobile-menu {
+  button#mobile-menu {
     display: flex;
 
     background-color: #00000033;
@@ -207,8 +235,8 @@ li.menu-contact  {
   li.li-link {
     text-align: start;
 
+    height: unset;
     width: 100%;
-    padding: 1rem 0;
     
     transition: background-color .3s ease-in-out;
 

@@ -1,6 +1,6 @@
 import "./Contact.css";
 
-import { MdEmail, MdLocationOn, MdPhone, MdWhatsapp } from "react-icons/md";
+import { MdEmail, MdPhone, MdWhatsapp } from "react-icons/md";
 
 import contactImg from "../assets/images/testando11.webp";
 
@@ -13,7 +13,7 @@ export default function Contact() {
           <div className="contact-content w-6/12">
             <div className="!mb-4">
               <h1 className="text-3xl font-semibold !mb-2">Fale conosco</h1>
-              <p className="text-justify !leading-[1.2rem]">Está precisando de atendimento ou suporte? Nossa equipe está pronta para ajudar você agora mesmo! Escolha onde prefere ser atendido.</p>
+              <p className="text-justify hyphens-auto !leading-[1.2rem]">Está precisando de atendimento ou suporte? Nossa equipe está pronta para ajudar você agora mesmo! Escolha onde prefere ser atendido.</p>
             </div>
             <div className="c-list flex">
               <div>
@@ -21,7 +21,7 @@ export default function Contact() {
                   <li><a href="" target="_blank" rel="noreferrer" className="contact-l flex items-center gap-2"><MdWhatsapp/><span className="font-medium">WhatsApp</span></a></li>
                   <li><a href="" target="_blank" rel="noreferrer" className="contact-l flex items-center gap-2"><MdPhone/><span className="font-medium">(81) 9 8888-9999</span></a></li>
                   <li><a href="" target="_blank" rel="noreferrer" className="contact-l flex items-center gap-2"><MdEmail/><span className="font-medium">jnet.contato@hotmail.com</span></a></li>
-                  <li><a href="" target="_blank" rel="noreferrer" className="contact-l flex items-center gap-2"><MdLocationOn/><span className="font-medium">Rua X, № X</span></a></li>
+                  {/* <li><a href="" target="_blank" rel="noreferrer" className="contact-l flex items-center gap-2"><MdLocationOn/><span className="font-medium">Rua X, № X</span></a></li> */}
                 </ul>
               </div>
             </div>

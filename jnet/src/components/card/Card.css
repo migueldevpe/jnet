@@ -7,7 +7,7 @@ div.card {
 
   max-height: 450px;
   width: 100%;
-  max-width: 240px;
+  max-width: 300px;
 
   z-index: 0;
   transition: transform .5s ease-in-out;
@@ -22,8 +22,6 @@ div.card {
 }
 
 div.card img {
-  display: none;
-
   position: absolute;
   right: -5rem;
   bottom: 44px;
@@ -83,7 +81,7 @@ svg.card-star {
   transition: transform .5s ease-in-out;
 }
 
-@media (max-width: 500px) {
+/* @media (max-width: 500px) {
   div.card {
     max-width: 100%;
   }
@@ -91,4 +89,4 @@ svg.card-star {
   div.wrapper-img img {
     display: block;
   }
-}
+} */

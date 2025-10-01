@@ -1,4 +1,4 @@
-@keyframes slide {
+@keyframes h-slide {
   0%, 100% {
     transform: translateY(-75%);
   }
@@ -36,11 +36,6 @@ section.home-text-bg {
   padding: clamp(1.5rem, 4vh, 2rem) 0;
 }
 
-img.bg-logo {
-  top: .5rem;
-  left: clamp(0rem, calc((1080px - 100vw) / 100px * 1rem), .5rem);
-}
-
 div.bg-text {
   top: 50%;
   left: clamp(0rem, calc((1080px - 100vw) / 125px * 2rem), 1.5rem);
@@ -65,8 +60,8 @@ span.p-button-text {
   transition: transform .4s ease-in-out;
 }
 
-svg.plans-arrow {
-  animation: slide 1s infinite;
+svg.home-arrow {
+  animation: h-slide 1s infinite;
 }
 
 @media (max-width: 768px) {

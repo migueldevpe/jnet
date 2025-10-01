@@ -15,7 +15,6 @@
   margin: 0;
   padding: 0;
 
-  scrollbar-width: thin;
   scroll-behavior: smooth;
 }
 
@@ -24,6 +23,10 @@
   --home-subtitle: clamp(1rem, 1.975vw, 1.3rem);
 
   --padding-section-y: clamp(2rem, 8vh, 4rem);
+}
+
+html {
+  scrollbar-width: thin;
 }
 
 body {

@@ -123,6 +123,7 @@ div.accordion-body p {
   font-family: 'Inter', 'Segoe UI', sans-serif;
   line-height: 1.2em;
   text-align: justify;
+  hyphens: auto;
   transition: color .3s ease-in-out;
 }
 

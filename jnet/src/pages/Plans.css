@@ -1,3 +1,12 @@
+@keyframes slide {
+  0%, 100% {
+    transform: translateX(-75%);
+  }
+  50% {
+    transform: translateX(-25%);
+  }
+}
+
 div#plans {
   padding: var(--padding-section-y) 2rem;
 
@@ -5,8 +14,36 @@ div#plans {
 }
 
 div.plans-cards-content {
-  grid-template-columns: repeat(3, minmax(0, 240px));
   align-items: stretch;
+  gap: 1rem;
+
+  border-radius: 25px;
+
+  padding: .5rem;
+}
+
+div.plans-cards-content::-webkit-scrollbar {
+  height: 8px;
+
+  border-radius: 9999px;
+}
+
+div.plans-cards-content::-webkit-scrollbar-thumb {
+  background-color: #aaaaaa;
+
+  border-radius: 9999px;
+
+  cursor: grab;
+
+  height: 10%;
+}
+
+div.plans-cards-content::-webkit-scrollbar-thumb:active {
+  cursor: grabbing;
+}
+
+svg.plans-arrow {
+  animation: slide 1s infinite;
 }
 
 @media (max-width: 768px) {
@@ -15,33 +52,6 @@ div.plans-cards-content {
   }
 
   div.plans-content {
-    gap: 2.5rem;
-  }
-
-  div.plans-cards-content {
-    grid-template-columns: repeat(2, minmax(0, 240px));
-    justify-content: center;
-  }
-
-  div.plans-cards-content > :last-child {
-    display: grid;
-    grid-template-areas: "a";
-    grid-column: 1/-1;
-    justify-self: center;
-  }
-}
-
-@media (max-width: 500px) {
-  div.plans-cards-content {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-    justify-content: center;
-    gap: 1.5rem;
-  }
-
-  div.plans-cards-content > :last-child {
-    display: unset;
-    grid-template-areas: unset;
-    grid-column: unset;
-    justify-self: unset;
+    gap: 1.4rem;
   }
 }

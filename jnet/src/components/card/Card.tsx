@@ -20,7 +20,7 @@ interface CardProps {
 export default function Card({ children, label="-", title="MEGA", desc="-", listItems, valor="00,00", img, others_style={"--border-card-color": "#005dfe", "--button-fade-1": "#000082", "--button-fade-2": "#005dfe"} as React.CSSProperties, tooltip_text="Vazio"}: CardProps) {
 
   return (
-    <div className="card flex flex-col relative bg-gray-50" style={others_style}>
+    <div className="card flex flex-col shrink-0 relative bg-gray-50" style={others_style}>
       <div className="wrapper-img absolute inset-0 overflow-hidden rounded-[20px] pointer-events-none">
         <AiOutlineGlobal className="jnet-icon text-[#646466]"/> {/* <- TALVEZ EU REMOVA ISSO */}
         {children}
@@ -36,7 +36,7 @@ export default function Card({ children, label="-", title="MEGA", desc="-", list
           </Tooltip>                  
         </div>
       </div>
-      <div className="flex flex-col gap-8 !p-4 !pt-0 !px-5 drop-shadow-sm drop-shadow-white">
+      <div className="flex flex-col gap-8 !p-4 !pt-0 !px-5 drop-shadow-xs drop-shadow-white">
         <div className="relative">
           <h2 className="text-[#0d194f] text-[2rem] uppercase font-bold tracking-tight">{title}</h2>
           <h3 className="flex flex-row gap-1 text-[#646466] text-sm"><MdWifiTethering />{desc}</h3>
