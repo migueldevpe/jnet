@@ -1,12 +1,16 @@
 import "./Plans.css";
-import Card from "../components/card/Card.tsx";
-import { MdHeadsetMic, MdOutlineFileDownload, MdOutlineFileUpload, MdStar, MdWifi } from "react-icons/md";
-import { PiToolbox } from "react-icons/pi";
+//import Card from "../components/card/Card.tsx";
 
 import mlk from "../../../outros/mlk.webp"
 import mlk1 from "../../../outros/mlk1.webp"
 import mlk2 from "../../../outros/mlk2.webp"
+
+import { MdHeadsetMic, MdOutlineFileDownload, MdOutlineFileUpload, MdStar, MdWifi } from "react-icons/md";
+import { PiToolbox } from "react-icons/pi";
 import { FaArrowRight } from "react-icons/fa6";
+import React, { Suspense } from "react";
+
+const Card = React.lazy(() => import("../components/card/Card.tsx"));
 
 export default function Plans() {
 
@@ -20,60 +24,78 @@ export default function Plans() {
           </div>
           <div>
             <div className="plans-cards-content flex items-start gap-2 w-full overflow-x-auto">
-              <Card 
-                label="Básico"
-                title="100MEGA"
-                desc="Internet FIBRA"
-                listItems={
-                  <>
-                    <li className="flex flex-row gap-1.5"><PiToolbox />Instalação</li>
-                    <li className="flex flex-row gap-1.5"><MdWifi />100% Fibra Ótica</li>
-                    <li className="flex flex-row gap-1.5"><MdOutlineFileDownload />Download 100Mbps</li>
-                    <li className="flex flex-row gap-1.5"><MdOutlineFileUpload />Upload 100Mbps</li>
-                    <li className="flex flex-row gap-1.5"><MdHeadsetMic />Suporte 24h</li>
-                  </>
-                }  
-                valor="54,99"
-                img={mlk2}
-                tooltip_text="Ideal para quem usa redes sociais, assiste vídeos em HD e conecta até 2 dispositivos sem travar."
-              />
-              <Card 
-                label="Intermediário"
-                title="200MEGA"
-                desc="Internet FIBRA"
-                listItems={
-                  <>
-                    <li className="flex flex-row gap-1.5"><PiToolbox />Instalação</li>
-                    <li className="flex flex-row gap-1.5"><MdWifi />100% Fibra Ótica</li>
-                    <li className="flex flex-row gap-1.5"><MdOutlineFileDownload />Download 200Mbps</li>
-                    <li className="flex flex-row gap-1.5"><MdOutlineFileUpload />Upload 200Mbps</li>
-                    <li className="flex flex-row gap-1.5"><MdHeadsetMic />Suporte 24h</li>
-                  </>
-                }  
-                valor="64,99"
-                img={mlk1}
-                tooltip_text="Perfeito para famílias pequenas, chamadas de vídeo, jogos online e streaming em alta qualidade."
-              />
-              <Card 
-                label="Popular"
-                title="400MEGA"
-                desc="Internet FIBRA"
-                listItems={
-                  <>
-                    <li className="flex flex-row gap-1.5"><PiToolbox />Instalação</li>
-                    <li className="flex flex-row gap-1.5"><MdWifi />100% Fibra Ótica</li>
-                    <li className="flex flex-row gap-1.5"><MdOutlineFileDownload />Download 400Mbps</li>
-                    <li className="flex flex-row gap-1.5"><MdOutlineFileUpload />Upload 400Mbps</li>
-                    <li className="flex flex-row gap-1.5"><MdHeadsetMic />Suporte 24h</li>
-                  </>
-                }  
-                valor="79,99"
-                img={mlk}
-                others_style={{"--border-card-color": "orange", "--button-fade-1": "#ffc65c", "--button-fade-2": "orange"} as React.CSSProperties}
-                tooltip_text="Feito para casas com muitos dispositivos, home office, streaming em 4K e máxima performance online."
-              >
-                <MdStar className="card-star absolute top-2.5 right-2.5 text-[orange]" size={24}/>
-              </Card>
+              <Suspense fallback={
+                <div className="flex items-center justify-center shrink-0 bg-[#dadada] border-[#808080] border-2 rounded-[15px] h-[380px] max-w-[300px] w-full">
+                  <img src="/hero/jnet-w.webp" alt="Carregando" className="loading-logo brightness-35" loading="eager" decoding="sync" fetchPriority="high"/>
+                </div>
+                }>
+                <Card 
+                  label="Básico"
+                  title="100MEGA"
+                  desc="Internet FIBRA"
+                  listItems={
+                    <>
+                      <li className="flex flex-row gap-1.5"><PiToolbox />Instalação</li>
+                      <li className="flex flex-row gap-1.5"><MdWifi />100% Fibra Ótica</li>
+                      <li className="flex flex-row gap-1.5"><MdOutlineFileDownload />Download 100Mbps</li>
+                      <li className="flex flex-row gap-1.5"><MdOutlineFileUpload />Upload 100Mbps</li>
+                      <li className="flex flex-row gap-1.5"><MdHeadsetMic />Suporte 24h</li>
+                    </>
+                  }  
+                  valor="54,99"
+                  img={mlk2}
+                  tooltip_text="Ideal para quem usa redes sociais, assiste vídeos em HD e conecta até 2 dispositivos sem travar."
+                />
+                </Suspense>
+              <Suspense fallback={
+                <div className="flex items-center justify-center shrink-0 bg-[#dadada] border-[#808080] border-2 rounded-[15px] h-[380px] max-w-[300px] w-full">
+                  <img src="/hero/jnet-w.webp" alt="Carregando" className="loading-logo brightness-35" loading="eager" decoding="sync" fetchPriority="high"/>
+                </div>
+                }>
+                <Card 
+                  label="Intermediário"
+                  title="200MEGA"
+                  desc="Internet FIBRA"
+                  listItems={
+                    <>
+                      <li className="flex flex-row gap-1.5"><PiToolbox />Instalação</li>
+                      <li className="flex flex-row gap-1.5"><MdWifi />100% Fibra Ótica</li>
+                      <li className="flex flex-row gap-1.5"><MdOutlineFileDownload />Download 200Mbps</li>
+                      <li className="flex flex-row gap-1.5"><MdOutlineFileUpload />Upload 200Mbps</li>
+                      <li className="flex flex-row gap-1.5"><MdHeadsetMic />Suporte 24h</li>
+                    </>
+                  }  
+                  valor="64,99"
+                  img={mlk1}
+                  tooltip_text="Perfeito para famílias pequenas, chamadas de vídeo, jogos online e streaming em alta qualidade."
+                />
+                </Suspense>
+              <Suspense fallback={
+                <div className="flex items-center justify-center shrink-0 bg-[#dadada] border-[#808080] border-2 rounded-[15px] h-[380px] max-w-[300px] w-full">
+                  <img src="/hero/jnet-w.webp" alt="Carregando" className="loading-logo brightness-35" loading="eager" decoding="sync" fetchPriority="high"/>
+                </div>
+                }>
+                <Card 
+                  label="Popular"
+                  title="400MEGA"
+                  desc="Internet FIBRA"
+                  listItems={
+                    <>
+                      <li className="flex flex-row gap-1.5"><PiToolbox />Instalação</li>
+                      <li className="flex flex-row gap-1.5"><MdWifi />100% Fibra Ótica</li>
+                      <li className="flex flex-row gap-1.5"><MdOutlineFileDownload />Download 400Mbps</li>
+                      <li className="flex flex-row gap-1.5"><MdOutlineFileUpload />Upload 400Mbps</li>
+                      <li className="flex flex-row gap-1.5"><MdHeadsetMic />Suporte 24h</li>
+                    </>
+                  }  
+                  valor="79,99"
+                  img={mlk}
+                  others_style={{"--border-card-color": "orange", "--button-fade-1": "#ffc65c", "--button-fade-2": "orange"} as React.CSSProperties}
+                  tooltip_text="Feito para casas com muitos dispositivos, home office, streaming em 4K e máxima performance online."
+                >
+                  <MdStar className="card-star absolute top-2.5 right-2.5 text-[orange]" size={24}/>
+                </Card>
+              </Suspense>
             </div>
             <span className="md:hidden block relative text-sm text-[#707070] w-fit !mt-[.5rem]">Arraste para ver mais planos
             <FaArrowRight className="plans-arrow absolute right-[-1.75rem] top-0 transform-[translateY(-50%)]"/>

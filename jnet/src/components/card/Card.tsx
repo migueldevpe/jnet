@@ -21,7 +21,7 @@ export default function Card({ children, label="-", title="MEGA", desc="-", list
 
   return (
     <div className="card flex flex-col shrink-0 relative bg-gray-50" style={others_style}>
-      <div className="wrapper-img absolute inset-0 overflow-hidden rounded-[20px] pointer-events-none">
+      <div className="wrapper-img absolute inset-0 overflow-hidden rounded-[15px] pointer-events-none">
         <AiOutlineGlobal className="jnet-icon text-[#646466]"/> {/* <- TALVEZ EU REMOVA ISSO */}
         {children}
         <div className="relative inset-0 h-full w-full">
