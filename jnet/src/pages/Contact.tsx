@@ -2,7 +2,7 @@ import "./Contact.css";
 
 import { MdEmail, MdPhone, MdWhatsapp } from "react-icons/md";
 
-import contactImg from "../assets/images/testando11.webp";
+import contactImg from "../assets/images/contact.webp";
 
 export default function Contact() {
 
