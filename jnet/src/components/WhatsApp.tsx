@@ -1,6 +1,8 @@
-import { FaWhatsapp } from "react-icons/fa";
 import "./WhatsApp.css";
+
 import useMessage from "../hooks/useMessage.ts";
+
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function WhatsApp() {
   const horário = useMessage();

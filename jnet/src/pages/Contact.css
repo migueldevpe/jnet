@@ -1,5 +1,7 @@
 div#contact {
   padding: var(--padding-section-y) 2rem;
+
+  scroll-margin-top: 40px;
 }
 
 img.c-img {
@@ -20,6 +22,20 @@ a.contact-l {
     }
   }
 }
+
+div.contact-content {
+  width: 100%;
+}
+
+div.c-list,
+div.c-list div,
+div.c-content-img {
+  width: 100%;
+}
+
+/* div.c-content-img {
+  width: 100%;
+} */
 
 a.contact-l svg {
   background-color: transparent;
@@ -48,20 +64,6 @@ a.contact-l span {
   div.contact-root {
     flex-direction: column;
   }
-  
-  div.contact-content {
-    width: 100%;
-  }
-
-  div.c-list,
-  div.c-list div,
-  div.c-content-img {
-    width: 100%;
-  }
-
-  /* div.c-content-img {
-    width: 100%;
-  } */
 
   img.c-img {
     max-width: 375px;

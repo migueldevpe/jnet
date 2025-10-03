@@ -1,12 +1,3 @@
-@keyframes slide {
-  0%, 100% {
-    transform: translateX(-75%);
-  }
-  50% {
-    transform: translateX(-25%);
-  }
-}
-
 div#plans {
   padding: var(--padding-section-y) 2rem;
 
@@ -43,7 +34,7 @@ div.plans-cards-content::-webkit-scrollbar-thumb:active {
 }
 
 svg.plans-arrow {
-  animation: slide 1s infinite;
+  animation: r-slide 1s infinite;
 }
 
 @media (max-width: 768px) {

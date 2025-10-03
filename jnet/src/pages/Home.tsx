@@ -20,7 +20,7 @@ export default function Home() {
     <div id="home" className="w-full">
       <Suspense fallback={
         <div className="flex items-center justify-center bg-[#dadada] border-y-[2px] border-[#808080] h-[350px] !w-full">
-          <img src="/hero/jnet-w.webp" alt="Carregando" className="loading-logo brightness-35" loading="eager" decoding="sync" fetchPriority="high"/>
+          <img src="/hero/jnet.webp" alt="Carregando" className="loading-logo brightness-35" loading="eager" decoding="sync" fetchPriority="high"/>
         </div>
         }>
         <HeroBackground />
@@ -32,7 +32,7 @@ export default function Home() {
       </div>
       <div className="bg-s flex justify-center w-full">
         <section className="home-text-bg bg-s w-full max-w-[1000px]">
-
+          <h1>COMEÇANDO</h1>
         </section>
       </div>
     </div>

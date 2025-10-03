@@ -1,6 +1,8 @@
-import { AiOutlineGlobal } from "react-icons/ai";
-import Tooltip from "../Tooltip";
 import "./Card.css"
+
+import Tooltip from "../Tooltip";
+
+import { AiOutlineGlobal } from "react-icons/ai";
 import { IoMdInformationCircle } from "react-icons/io";
 import { MdWifiTethering } from "react-icons/md";
 import { MdOutlineSpeed } from "react-icons/md";
@@ -36,7 +38,7 @@ export default function Card({ children, label="-", title="MEGA", desc="-", list
           </Tooltip>                  
         </div>
       </div>
-      <div className="flex flex-col gap-8 !p-4 !pt-0 !px-5 drop-shadow-xs drop-shadow-white">
+      <div className="flex flex-col gap-8 !p-4 !pt-0 !px-5 [text-shadow:-1px_-1px_0_white,1px_-1px_0_white,-1px_1px_0_white,1px_1px_0_white]">
         <div className="relative">
           <h2 className="text-[#0d194f] text-[2rem] uppercase font-bold tracking-tight">{title}</h2>
           <h3 className="flex flex-row gap-1 text-[#646466] text-sm"><MdWifiTethering />{desc}</h3>
@@ -50,7 +52,7 @@ export default function Card({ children, label="-", title="MEGA", desc="-", list
         <span className="card-price flex items-baseline text-[#646466] font-bold">
           R$<strong className="text-[#000]">{valor}</strong>/mês
         <Tooltip label="Lembre-se, a velocidade de conexão pode ter oscilações e variações conforme fatores externos, condições topográficas e/ou climáticas, movimento, distância e/ou número de clientes usando a mesma antena, do modo usado na conexão, das aplicações ou dos sites." show={{ "--tooltip-hover-x": "-4.75rem", "--tooltip-hover-y": "-8.75rem" } as React.CSSProperties} p_arrow_tooltip="t-arrow-bottom">
-          <IoMdInformationCircle className="!ml-1 text-[#000] text-[1rem] cursor-help" />
+          <IoMdInformationCircle className="!ml-1 text-[#000] text-[1rem] cursor-help [filter:drop-shadow(0_2px_0_white)]" />
         </Tooltip>
         </span>
       </div>

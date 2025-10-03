@@ -1,12 +1,3 @@
-@keyframes h-slide {
-  0%, 100% {
-    transform: translateY(-75%);
-  }
-  50% {
-    transform: translateY(-25%);
-  }
-}
-
 div.home-bg {
   background-image: linear-gradient(45deg, #0041ff, #005dfe);
   background-size: cover;
@@ -49,7 +40,7 @@ span.p-button-text {
 }
 
 svg.home-arrow {
-  animation: h-slide 1s infinite;
+  animation: d-slide 1s infinite;
 }
 
 @media (max-width: 768px) {

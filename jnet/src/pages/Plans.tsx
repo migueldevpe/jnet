@@ -1,9 +1,9 @@
 import "./Plans.css";
 //import Card from "../components/card/Card.tsx";
 
-import mlk from "../../../outros/mlk.webp"
-import mlk1 from "../../../outros/mlk1.webp"
-import mlk2 from "../../../outros/mlk2.webp"
+import imgCard1 from "../../../outros/mlk2.webp"
+import imgCard2 from "../../../outros/mlk1.webp"
+import imgCard3 from "../../../outros/mlk.webp"
 
 import { MdHeadsetMic, MdOutlineFileDownload, MdOutlineFileUpload, MdStar, MdWifi } from "react-icons/md";
 import { PiToolbox } from "react-icons/pi";
@@ -43,7 +43,7 @@ export default function Plans() {
                     </>
                   }  
                   valor="54,99"
-                  img={mlk2}
+                  img={imgCard1}
                   tooltip_text="Ideal para quem usa redes sociais, assiste vídeos em HD e conecta até 2 dispositivos sem travar."
                 />
                 </Suspense>
@@ -66,7 +66,7 @@ export default function Plans() {
                     </>
                   }  
                   valor="64,99"
-                  img={mlk1}
+                  img={imgCard2}
                   tooltip_text="Perfeito para famílias pequenas, chamadas de vídeo, jogos online e streaming em alta qualidade."
                 />
                 </Suspense>
@@ -89,7 +89,7 @@ export default function Plans() {
                     </>
                   }  
                   valor="79,99"
-                  img={mlk}
+                  img={imgCard3}
                   others_style={{"--border-card-color": "orange", "--button-fade-1": "#ffc65c", "--button-fade-2": "orange"} as React.CSSProperties}
                   tooltip_text="Feito para casas com muitos dispositivos, home office, streaming em 4K e máxima performance online."
                 >
