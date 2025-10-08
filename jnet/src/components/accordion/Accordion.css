@@ -15,25 +15,21 @@ div.accordion-root.closing span.accordion-open {
   transform: rotate(180deg);
 }
 
-/* div.accordion-root:not(.active):not(.closing):hover span.accordion-open {
-  animation: wiggleShake .3s ease-in-out forwards;
-} */
-
 div.accordion-root {
-  box-shadow: 0 0 1rem #0000000d;
+  box-shadow: 0 0 1rem var(--acc-shadow);
 
   &:hover {
     button.accordion-header {
-      background-color: #F3F4F6 !important;
+      background-color: var(--acc-hover) !important;
     }
   }
 }
 
 button.accordion-header {
-  background-color: #F9FAFB;
-  color: #000;
+  background-color: var(--text-header);
+  color: var(--text-color);
 
-  border: 1px solid #E5E7EB;
+  border: 1px solid var(--acc-border);
   border-radius: 5px;
   
   cursor: pointer;
@@ -41,7 +37,7 @@ button.accordion-header {
   width: 100%;
 
   padding: .8rem;
-  transition: background-color, .3s ease-in-out, border-radius 1.25s ease-in-out;
+  transition: background-color .3s ease-in-out, border-color .3s ease-in-out, border-radius 1.25s ease-in-out;
 }
 
 button.accordion-header > span {
@@ -57,10 +53,10 @@ div.accordion-body {
 
   gap: 1rem;
 
-  background-color: #fefefe;
-  color: #000;
+  background-color: var(--acc-bg);
+  color: var(--text-color);
 
-  border: 1px solid #E5E7EB;
+  border: 1px solid var(--acc-border);
   border-radius: 0 0 5px 5px;
 
   visibility: hidden;
@@ -70,7 +66,7 @@ div.accordion-body {
   width: 100%;
 
   padding: 0 1.2rem;
-  transition: max-height .5s ease-in-out, padding .5s ease-in-out, visibility .45s ease-in-out;
+  transition: background-color .3s ease-in-out, border-color .3s ease-in-out, max-height .5s ease-in-out, padding .5s ease-in-out, visibility .45s ease-in-out;
 }
 
 div.accordion-root.active {
@@ -80,14 +76,14 @@ div.accordion-root.active {
     max-height: 1000px;
 
     padding: 1.2rem;
-    transition: background-color .3s ease-in-out, max-height .5s ease-in-out, padding .5s ease-in-out, visibility .5s ease-in-out;
+    transition: background-color .3s ease-in-out, border-color .3s ease-in-out, max-height .5s ease-in-out, padding .5s ease-in-out, visibility .5s ease-in-out;
   }
 
   button.accordion-header  {
-    background-color: #E5E7EB;
+    background-color: var(--acc-border);
 
     border-radius: 5px 5px 0 0;
-    transition: background-color .3s ease-in-out, border-radius 0s ease-in-out;
+    transition: background-color .3s ease-in-out, border-color .3s ease-in-out, border-radius 0s ease-in-out;
   }
 }
 
@@ -98,7 +94,6 @@ div.accordion-body h2 {
 }
 
 div.accordion-body p {
-  font-family: 'Inter', 'Segoe UI', sans-serif;
   line-height: 1.2rem;
   text-align: justify;
   hyphens: auto;
@@ -106,7 +101,6 @@ div.accordion-body p {
 }
 
 div.accordion-body p strong {
-  font-family: 'Inter', 'Segoe UI', sans-serif;
   line-height: 1.2rem;
 }
 

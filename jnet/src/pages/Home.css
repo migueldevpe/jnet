@@ -10,6 +10,32 @@ section.home-text-bg {
   padding: clamp(1.5rem, 4vh, 2rem) 0;
 }
 
+/* div.bg-h-s {
+  background-image: url(https://bracketweb.com/zeinetwp/wp-content/uploads/2022/10/free-access-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+
+  &::after {
+    content: '';
+    position: absolute;
+
+    background-color: #0059ff40;
+
+    height: 100%;
+    width: 100%;
+
+    z-index: 0;
+  }
+} */
+
+section.home-content {
+  padding: clamp(1.5rem, 4vh, 2rem) 0;
+}
+
 img.loading-logo {
+  filter: brightness(0.5);
+
   animation: loading 2s ease-in-out infinite;
 }

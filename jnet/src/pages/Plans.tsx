@@ -1,9 +1,9 @@
 import "./Plans.css";
-//import Card from "../components/card/Card.tsx";
 
-import imgCard1 from "../../../outros/mlk2.webp"
-import imgCard2 from "../../../outros/mlk1.webp"
-import imgCard3 from "../../../outros/mlk.webp"
+import imgCard1 from "../assets/images/cardMen.webp"
+import imgCard2 from "../assets/images/cardGirl.webp"
+import imgCard3 from "../assets/images/cardBoy.webp"
+import useMessage from "../hooks/useMessage.ts";
 
 import { MdHeadsetMic, MdOutlineFileDownload, MdOutlineFileUpload, MdStar, MdWifi } from "react-icons/md";
 import { PiToolbox } from "react-icons/pi";
@@ -15,7 +15,7 @@ const Card = React.lazy(() => import("../components/card/Card.tsx"));
 export default function Plans() {
 
   return (
-    <div id="plans" className="bg-s flex justify-center w-full bg-gray-100">
+    <div id="plans" className="bg-s flex justify-center w-full bg-[var(--bg-2)] text-[var(--text-color)] transition-colors duration-300">
       <section className="w-full max-w-[1000px]">
         <div className="plans-content flex flex-col gap-10 w-full">
           <div className="w-full">
@@ -25,8 +25,8 @@ export default function Plans() {
           <div>
             <div className="plans-cards-content flex items-start gap-2 w-full overflow-x-auto">
               <Suspense fallback={
-                <div className="flex items-center justify-center shrink-0 bg-[#dadada] border-[#808080] border-2 rounded-[15px] h-[380px] max-w-[300px] w-full">
-                  <img src="/hero/jnet-w.webp" alt="Carregando" className="loading-logo brightness-35" loading="eager" decoding="sync" fetchPriority="high"/>
+                <div className="flex items-center justify-center shrink-0 bg-[var(--bg-loading)] border-[#808080] border-2 rounded-[15px] h-[380px] max-w-[300px] w-full">
+                  <img src="/hero/jnet-logo.webp" alt="Carregando" className="loading-logo h-[100px] w-[100px]" loading="eager" decoding="sync" fetchPriority="high"/>
                 </div>
                 }>
                 <Card 
@@ -45,15 +45,21 @@ export default function Plans() {
                   valor="54,99"
                   img={imgCard1}
                   tooltip_text="Ideal para quem usa redes sociais, assiste vídeos em HD e conecta até 2 dispositivos sem travar."
+                  w_message={`
+                    Olá, ${useMessage()}!
+                    Gostaria de solicitar a disponibilidade do plano *Básico* em minha região.
+
+                    Meu *CEP*:
+                  `}
                 />
                 </Suspense>
               <Suspense fallback={
-                <div className="flex items-center justify-center shrink-0 bg-[#dadada] border-[#808080] border-2 rounded-[15px] h-[380px] max-w-[300px] w-full">
-                  <img src="/hero/jnet-w.webp" alt="Carregando" className="loading-logo brightness-35" loading="eager" decoding="sync" fetchPriority="high"/>
+                <div className="flex items-center justify-center shrink-0 bg-[var(--bg-loading)] border-[#808080] border-2 rounded-[15px] h-[380px] max-w-[300px] w-full">
+                  <img src="/hero/jnet-logo.webp" alt="Carregando" className="loading-logo h-[100px] w-[100px]" loading="eager" decoding="sync" fetchPriority="high"/>
                 </div>
                 }>
                 <Card 
-                  label="Intermediário"
+                  label="Mega"
                   title="200MEGA"
                   desc="Internet FIBRA"
                   listItems={
@@ -68,15 +74,21 @@ export default function Plans() {
                   valor="64,99"
                   img={imgCard2}
                   tooltip_text="Perfeito para famílias pequenas, chamadas de vídeo, jogos online e streaming em alta qualidade."
+                  w_message={`
+                    Olá, ${useMessage()}!
+                    Gostaria de solicitar a disponibilidade do plano *Mega* em minha região.
+
+                    Meu *CEP*:
+                  `}
                 />
                 </Suspense>
               <Suspense fallback={
-                <div className="flex items-center justify-center shrink-0 bg-[#dadada] border-[#808080] border-2 rounded-[15px] h-[380px] max-w-[300px] w-full">
-                  <img src="/hero/jnet-w.webp" alt="Carregando" className="loading-logo brightness-35" loading="eager" decoding="sync" fetchPriority="high"/>
+                <div className="flex items-center justify-center shrink-0 bg-[var(--bg-loading)] border-[#808080] border-2 rounded-[15px] h-[380px] max-w-[300px] w-full">
+                  <img src="/hero/jnet-logo.webp" alt="Carregando" className="loading-logo h-[100px] w-[100px]" loading="eager" decoding="sync" fetchPriority="high"/>
                 </div>
                 }>
                 <Card 
-                  label="Popular"
+                  label="Família"
                   title="400MEGA"
                   desc="Internet FIBRA"
                   listItems={
@@ -90,19 +102,25 @@ export default function Plans() {
                   }  
                   valor="79,99"
                   img={imgCard3}
-                  others_style={{"--border-card-color": "orange", "--button-fade-1": "#ffc65c", "--button-fade-2": "orange"} as React.CSSProperties}
+                  others_style={{"--border-card-color": "orange", "--button-fade-1": "#ffa600", "--button-fade-2": "#ffc65c"} as React.CSSProperties}
                   tooltip_text="Feito para casas com muitos dispositivos, home office, streaming em 4K e máxima performance online."
+                  w_message={`
+                    Olá, ${useMessage()}!
+                    Gostaria de solicitar a disponibilidade do plano *Família* em minha região.
+
+                    Meu *CEP*:
+                  `}
                 >
-                  <MdStar className="card-star absolute top-2.5 right-2.5 text-[orange]" size={24}/>
+                  <MdStar className="card-star absolute top-2.5 right-2.5 text-[#ffa600]" size={24}/>
                 </Card>
               </Suspense>
             </div>
-            <span className="md:hidden block relative text-sm text-[#707070] w-fit !mt-[.5rem]">Arraste para ver mais planos
+            <span className="md:hidden block relative text-sm text-[var(--card-other-text-plan)] transition-colors duration-300 w-fit !mt-[.5rem]">Arraste para ver mais planos
             <FaArrowRight className="plans-arrow absolute right-[-1.75rem] top-0 transform-[translateY(-50%)]"/>
             </span>
           </div>
           <div>
-            <p className="text-justify hyphens-auto !leading-4.75">Ainda está em dúvida sobre qual plano contratar? Vá até a <a className="link text-[#0066cc]" title="Ir até a secão de dúvidas." href="#doubts" target="_parent" rel="referrer">seção de dúvidas</a>, ou contate a nossa equipe de suporte que está pronta para te ajudar a escolher a melhor opção para o seu perfil de uso. Fale conosco pelo WhatsApp ou entre em contato pelos nossos <a className="link text-[#0066cc]" title="Ir até a secão de contato." href="#contact" target="_parent" rel="referrer">canais de atendimento</a> — vamos tirar todas as suas dúvidas e garantir que você tenha a melhor experiência online.</p>
+            <p className="text-justify hyphens-auto !leading-4.75">Ainda está em dúvida sobre qual plano contratar? Vá até a <a className="link text-[var(--link)] transition-colors duration-300" title="Ir até a secão de dúvidas." href="#doubts">seção de dúvidas</a>, ou contate a nossa equipe de suporte que está pronta para te ajudar a escolher a melhor opção para o seu perfil de uso. Fale conosco pelo WhatsApp ou entre em contato pelos nossos <a className="link text-[var(--link)] transition-colors duration-300" title="Ir até a secão de contato." href="#contact">canais de atendimento</a> — vamos tirar todas as suas dúvidas e garantir que você tenha a melhor experiência online.</p>
           </div>
         </div>
       </section>

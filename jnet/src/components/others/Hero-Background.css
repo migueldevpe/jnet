@@ -1,3 +1,12 @@
+@keyframes floatRotate {
+  0%   { transform: translateY(0) rotate(0deg); }
+  20%  { transform: translateY(-8px) rotate(-3deg); }
+  40%  { transform: translateY(-12px) rotate(2deg); }
+  60%  { transform: translateY(-10px) rotate(-2deg); }
+  80%  { transform: translateY(-6px) rotate(1deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
 div.home-bg {
   background-image: linear-gradient(45deg, #0041ff, #005dfe);
   background-size: cover;
@@ -15,6 +24,15 @@ div.wallpaper {
   aspect-ratio: 626 / 352;
 }
 
+img.home-img {
+  position: absolute;
+  bottom: 0;
+
+  height: 360px;
+
+  aspect-ratio: 450 / 394;
+}
+
 div.bg-text {
   top: 50%;
   left: clamp(0rem, calc((1080px - 100vw) / 125px * 2rem), 1.5rem);
@@ -26,7 +44,11 @@ div.bg-text {
 a.plans-button {
   &:hover {
     span.p-button-text {
-      transform: translateX(1.3rem);
+      color: #155dfc;
+    }
+
+    span.p-button-text::before {
+      height: 500%;
     }
   }
 }
@@ -36,26 +58,52 @@ span.p-button-text {
 
   border: 2px solid #ffffff5a;
   border-radius: 10px;
-  transition: transform .4s ease-in-out;
+
+  overflow: hidden;
+  transition: color .3s ease-in-out, transform .4s ease-in-out;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    background-color: #fff;
+
+    width: 100%;
+    height: 0;
+
+    z-index: -1;
+
+    transform: translate(-50%, -50%) rotate(-45deg);
+    transition: height, .4s ease-in-out, transform .4s ease-in-out;
+  }
 }
 
 svg.home-arrow {
   animation: d-slide 1s infinite;
 }
 
-@media (max-width: 768px) {
+img.home-icons {
+  animation: floatRotate 3s ease-in-out infinite;
+}
+
+img.home-icons:nth-child(2) {
+  animation: floatRotate 5s ease-in-out infinite;
+}
+
+@media (max-width: 767px) {
   img.fund {
     object-fit: cover;
   }
 
   img.home-img {
-    top: unset;
     bottom: -2.6%;
     left: 50%;
     transform: translateX(-50%);
 
     height: auto;
-    min-height: 350px;
+    min-height: 370px;
     width: 100%;
     max-width: 425px;
 
@@ -83,8 +131,6 @@ svg.home-arrow {
 
   a.plans-button {
     align-self: center;
-
-    padding-left: 1.3rem;
 
     &:hover {
       span.p-button-text {

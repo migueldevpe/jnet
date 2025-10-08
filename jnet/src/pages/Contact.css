@@ -5,6 +5,8 @@ div#contact {
 }
 
 img.c-img {
+  filter: drop-shadow(8px 4px 6px #0000004d);
+
   margin-top: -2%;
 }
 
@@ -14,7 +16,7 @@ a.contact-l {
     svg {
       background-color: #005dfe;
 
-      color: white;
+      color: var(--bg-1);
     }
 
     span {
@@ -33,10 +35,6 @@ div.c-content-img {
   width: 100%;
 }
 
-/* div.c-content-img {
-  width: 100%;
-} */
-
 a.contact-l svg {
   background-color: transparent;
   color: #005dfe;
@@ -52,7 +50,7 @@ a.contact-l svg {
 }
 
 a.contact-l span {
-  color: #000;
+  color: var(--text-color);
   transition: color .3s ease-in-out;
 }
 

@@ -14,14 +14,13 @@ div.tooltip {
   top: var(--tooltip-hover-y); /* 100 / 10 */
   left: var(--tooltip-hover-x);
 
-  background-color: #f0f0f0;
-  color: #000;
+  background-color: var(--bg-tooltip);
+  color: var(--text-color);
 
-  text-align: start;
+  text-align: flex-start;
   font-size: .75rem;
 
   border-radius: 5px;
-  border-top-left-radius: 0;
 
   width: max-content;
   max-width: 175px;
@@ -29,7 +28,10 @@ div.tooltip {
   opacity: 0;
   visibility: hidden;
 
-  transition: opacity .2s ease-in-out, visibility .2s ease-in-out;
+  z-index: 5;
+
+  transform: translateX(-50%);
+  transition: background-color .3s ease-in-out, color .3s ease-in-out, opacity .2s ease-in-out, visibility .2s ease-in-out;
 
   &::before {
     content: "";
@@ -51,9 +53,10 @@ div.t-arrow-top {
     top: -8px;
     left: 50%;
 
-    border-bottom: 10px solid #f0f0f0;   
+    border-bottom: 10px solid var(--bg-tooltip);   
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
+    transition: border-color .3s ease-in-out;
   }
 }
 
@@ -63,8 +66,9 @@ div.t-arrow-bottom {
     bottom: -8px;
     left: 50%;
 
-    border-top: 10px solid #f0f0f0;   
+    border-top: 10px solid var(--bg-tooltip);   
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
+    transition: border-color .3s ease-in-out;
   }
 }

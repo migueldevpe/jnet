@@ -1,18 +1,44 @@
-div.header-content {
+/*div.header-content {
   border-bottom: 2px solid #808080;
 
   box-shadow: 0 5px 25px #00000033;
+}*/
+
+ul#menu {
+  height: 100%;
+}
+
+div.header-content > nav li {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+span.jnet-pin {
+  svg {
+    height: 1em;
+    width: 1em;
+    
+    font-size: 1.25rem;
+
+    transform: rotate(180deg);
+    transition: transform .3s ease-in-out;
+  }
+
+  &:hover {
+    svg {
+      transform: rotate(0deg);
+    }
+  }
 }
 
 div#oc-menu {
   display: none;
 }
 
-ul#menu { 
-  z-index: unset;
-}
-
 aside.h-aside {
+  position: relative;
+
   padding: 0 .75rem;
 }
 
@@ -22,36 +48,77 @@ aside.h-aside a {
   }
 }
 
+li.l-hidden svg {
+  font-size: 1.5rem;
+}
+
+li.l-hidden span {
+  display: none;
+}
+
+button#mobile-menu {
+  display: none;
+}
+
 img.bg-logo {
   height: 50px;
+  width: auto;
 
   aspect-ratio: 1 / 1;
 
-  filter: brightness(0);
+  filter: var(--logo-1);
 }
 
 li.menu-contact  {
   display: none;
 }
 
-li.li-link {
+li.l-link {
   height: 100%;
 }
 
-li.li-link a {
+li.l-link a {
   display: flex;
   align-items: center;
 
   height: 100%;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+li.l-others ul {
+  padding-left: 1rem;
+}
+
+li.l-others li {
+  transition: background-color .3s ease-in-out, color .3s ease-in-out;
+}
+
+li.l-others li:nth-of-type(1):hover {
+  color: #C13584;
+}
+
+li.l-others li:nth-of-type(2):hover {
+  color: #1877F2;
 }
 
 @media (max-width: 768px) {
-  div.h-aside-nav {
-    font-size: .875rem;
+  ul.h-aside-nav {
+    font-size: .925rem;
   }
 }
 
 @media (max-width: 500px) {
+  img.bg-logo {
+    aspect-ratio: 218 / 85;
+  }
+
+  div.header-content > nav {
+    font-size: .8rem;
+  }
+
   button#mobile-menu {
     display: flex;
 
@@ -83,7 +150,13 @@ li.li-link a {
     }
 
     &.active {
+      position: fixed;
+      top: 52px;
+      right: 12px;
+
       background-color: #ffffff33;
+
+      z-index: 10;
       transition: background-color 0.5s ease-in-out;
 
       div.line-top {
@@ -117,34 +190,36 @@ li.li-link a {
   ul#menu {
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
     flex-direction: column;
     gap: unset;
 
-    position: absolute;
+    position: fixed;
     top: 38px;
-    right: -20rem;
+    right: 100%;
 
     height: 200dvh;
+    width: auto;
 
     background-image: linear-gradient(to bottom, #005dfe, blue); /* #005dfef2 */
     backdrop-filter: blur(2px);
-
+    color: white;
     /* border-radius: 10px;
-    border: 2px solid #808080; */
-    border-left: 2px solid #808080; 
+    border: 2px solid #808080; 
+    border-right: 2px solid #808080; */
 
     /* box-shadow: 0 0 1rem #00000033; */
 
     overflow: hidden;
     visibility: hidden;
 
-    z-index: -1;
-    transition: transform .5s ease-in-out, visibility .5s ease-in-out;
+    z-index: 5;
+
+    transition: transform .3s ease-in-out, visibility .3s ease-in-out;
   }
 
-  li.li-link {
-    text-align: start;
+  li.l-link {
+    text-align: flex-start;
 
     height: unset;
     width: 100%;
@@ -156,30 +231,49 @@ li.li-link a {
     }
   }
 
-  li.li-link a {
-    padding: 1rem 12rem 1rem 1rem;
-  }
+  li.l-link a {
+    text-wrap: nowrap;
 
-  li.menu-contact {
-    display: flex;
-  }
+    padding: 1rem 6rem 1rem 1rem;
 
-  li.menu-contact li {
     &:hover {
-      text-decoration: underline;
+      text-decoration: none;
     }
   }
 
-  li.menu-contact svg {
-    background-color: dodgerblue;
+  li.l-others {
+    width: 100%;
+  }
 
-    border-radius: 9999px;
+  li.l-others ul {
+    flex-direction: column;
+    gap: 0;
 
-    padding: 2px;
+    border: none;
+
+    width: 100%;
+
+    padding-left: unset;
+  }
+
+  li.l-hidden svg {
+    font-size: 1rem;
+  }
+
+  li.l-hidden span {
+    display: flex;
+  }
+
+  li.l-others li:nth-of-type(1):hover {
+    color: unset;
+  }
+
+  li.l-others li:nth-of-type(2):hover {
+    color: unset;
   }
 
   ul#menu.show {
-    transform: translateX(-17em);
+    transform: translateX(100%);
 
     visibility: visible;
   }
@@ -187,4 +281,11 @@ li.li-link a {
   body:has(ul#menu.show) {
     overflow: hidden;
   }
+}
+
+@media (max-width: 375px) {
+  /* ul.h-aside-nav {
+    align-items: flex-end;
+    flex-direction: column;
+  } */
 }

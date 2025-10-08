@@ -1,13 +1,15 @@
 import "./Contact.css";
 
-import { MdEmail, MdPhone, MdWhatsapp } from "react-icons/md";
+import { MdPhone, MdWhatsapp } from "react-icons/md";
+import { FaInstagram } from "react-icons/fa6";
 
-import contactImg from "../assets/images/contact.webp";
+import contactImg from "../assets/images/contactGirl.webp";
+import useMessage from "../hooks/useMessage";
 
 export default function Contact() {
 
   return (
-    <div id="contact" className="bg-s flex justify-center bg-gray-100 w-full">
+    <div id="contact" className="bg-s flex justify-center bg-[var(--bg-2)] text-[var(--text-color)] transition-colors duration-300 w-full">
       <section className="flex flex-col gap-4 w-full max-w-[1000px]">
         <div className="contact-root flex flex-row gap-4">
           <div className="contact-content w-6/12">
@@ -18,10 +20,13 @@ export default function Contact() {
             <div className="c-list flex">
               <div>
                 <ul className="flex flex-col gap-4">
-                  <li><a href="" target="_blank" rel="noreferrer" className="contact-l flex items-center gap-2"><MdWhatsapp/><span className="font-medium">WhatsApp</span></a></li>
-                  <li><a href="" target="_blank" rel="noreferrer" className="contact-l flex items-center gap-2"><MdPhone/><span className="font-medium">(81) 9 8888-9999</span></a></li>
-                  <li><a href="" target="_blank" rel="noreferrer" className="contact-l flex items-center gap-2"><MdEmail/><span className="font-medium">jnet.contato@hotmail.com</span></a></li>
-                  {/* <li><a href="" target="_blank" rel="noreferrer" className="contact-l flex items-center gap-2"><MdLocationOn/><span className="font-medium">Rua X, № X</span></a></li> */}
+                  <li><a href={`https://api.whatsapp.com/send/?phone=5581984931028&text=${`
+                    Olá, ${useMessage()}!
+                    Gostaria de ser atendido, poderia me ajudar?
+                    `}`} target="_blank" rel="noopener noreferrer" className="contact-l flex items-center gap-2"><MdWhatsapp /><span className="font-medium">WhatsApp</span></a></li>
+                  <li><a href="https://www.instagram.com/jnetultrafibra" target="_blank" rel="noopener noreferrer" className="contact-l flex items-center gap-2"><FaInstagram /><span className="font-medium">Instagram</span></a></li>
+                  <li><a href="tel:+5581984931028" target="_blank" rel="noopener noreferrer" className="contact-l flex items-center gap-2"><MdPhone /><span className="font-medium">(81) 9 8493-1028</span></a></li>
+                  {/* <li><a href="" target="_blank" rel="noopener noreferrer" className="contact-l flex items-center gap-2"><MdLocationOn/><span className="font-medium">Rua X, № X</span></a></li> */}
                 </ul>
               </div>
             </div>

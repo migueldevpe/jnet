@@ -20,7 +20,7 @@ div.plans-cards-content::-webkit-scrollbar {
 }
 
 div.plans-cards-content::-webkit-scrollbar-thumb {
-  background-color: #aaaaaa;
+  background-color: var(--card-other-text-plan);
 
   border-radius: 9999px;
 

@@ -68,6 +68,9 @@ div.w-notification {
 
   padding: 2px;
 
+  animation: w-noti 3s infinite ease-in-out;
+  animation-delay: 6s;
+
   user-select: none;
   -moz-user-select: none;
   -webkit-user-drag: none;

@@ -1,73 +1,173 @@
 import "./Header.css";
 
+import logoLG from "/hero/jnet-headerLG.webp?url"
+import logoSM from "/hero/jnet-headerSM.webp?url"
+import Tooltip from "./Tooltip";
 import useCloseMenu from "../hooks/useCloseMenu";
-import Logo from "/hero/jnet-w.webp?url"
+import useMessage from "../hooks/useMessage"; 
 
-import { IoChatbubblesSharp } from "react-icons/io5";
+import { IoChatbubblesSharp, IoContrast, IoHome } from "react-icons/io5";
 import { HiPhone } from "react-icons/hi";
-import { MdEmail, MdPhone } from "react-icons/md";
-import { AiOutlineGlobal } from "react-icons/ai";
-//import { useEffect } from "react";
+import { TiArrowSortedDown } from "react-icons/ti";
+import { FaFileSignature } from "react-icons/fa6";
+import { useEffect, useState } from "react";
+import { useTheme } from "../hooks/useTheme";
+import { RiInstagramFill } from "react-icons/ri";
+//import { MdFacebook } from "react-icons/md";
 
 export default function Header() {
+  const [ tel, setTel ] = useState<string>( window.innerWidth <= 767 ? "Ligar" : "(81) 9 8493-1028" );
+  const [ logo, setLogo ] = useState<string>(logoLG);
+  const [ btnContrast, setBtnContrast ] = useState<string>( window.innerWidth <= 375 ? "Contraste" : "Alto contraste" );
 
-/*useEffect(() => {
-  const ocMenu = document.getElementById('mobile-menu') as HTMLButtonElement;
-  const menu = document.getElementById('menu') as HTMLElement;
-
-  ocMenu.onclick = () => {
-
-  menu.classList.toggle('show');
-
-    if (ocMenu.classList.contains('active')) {
-      ocMenu.classList.remove('active');
-      ocMenu.classList.add('closing');
-
-      setTimeout(() => {
-        ocMenu.classList.remove('closing');
-      }, 500)
-    } else {
-      ocMenu.classList.remove('closing')
-      ocMenu.classList.add('active');
+  useEffect(() => {
+    function toggleTel() {
+      if (window.innerWidth <= 767) {
+        setTel("Ligar");
+      } else {
+        setTel("(81) 9 8493-1028");
+      }
     };
-  };
-}, []);*/
+
+    toggleTel();
+
+    window.addEventListener("resize", toggleTel);
+
+    return () => window.removeEventListener("resize", toggleTel);
+  }, []);
+
+  useEffect(() => {
+    function toggleLogo() {
+      if (window.innerWidth <= 500) {
+        setLogo(logoSM);
+      } else {
+        setLogo(logoLG);
+      }
+    };
+
+    toggleLogo();
+
+    window.addEventListener("resize", toggleLogo);
+
+    return () => window.removeEventListener("resize", toggleLogo);
+  },[])
+
+  useEffect(() => {
+    function toggleBtnContrast() {
+      if ( window.innerWidth <= 375 ) {
+        setBtnContrast("Contraste");
+      } else {
+        setBtnContrast("Alto contraste");
+      }
+    };
+
+    toggleBtnContrast();
+
+    window.addEventListener("resize", toggleBtnContrast);
+
+    return () => window.removeEventListener("resize", toggleBtnContrast);
+  }, [])
+
+  const { toggleTheme } = useTheme();
 
   return (
     <header className="flex flex-col items-center justify-center w-full !mt-[40px]">
-      <div className="header-content flex items-center justify-center fixed top-0 w-full h-[40px] bg-[#005dfe] text-white !px-3 z-10">
-        <nav className="flex flex-row items-center justify-between relative h-full w-full max-w-[1000px] {bg-[#005dfe]}">
-          <span className="flex flex-row gap-1.5"><AiOutlineGlobal />JNet — Pernambuco</span>
+      <div className="header-content flex items-center justify-center fixed top-0 h-full max-h-[40px] w-full bg-[#005dfe] text-white !px-2 z-10">
+        <nav className="flex flex-row items-center justify-between gap-2 h-full w-full max-w-[1000px] !py-[.5rem]">
+          <span className="jnet-pin relative">
+            <Tooltip label="Atendendo Recife, Olinda e Região." show={{ "--tooltip-hover-y": "1.75rem", "--tooltip-hover-x": "50%" } as React.CSSProperties} p_arrow_tooltip="t-arrow-top">
+              <div className="flex items-center">
+                <img src="/hero/jnet-logo.webp" alt="" className="h-[1.25em] w-[1.25em] pointer-events-none" loading="eager" decoding="sync" fetchPriority="high" />            
+                <span className="!ml-1.5 text-nowrap">
+                  JNet — Pernambuco
+                </span>
+                <TiArrowSortedDown className="shrink-0"/>
+              </div> 
+            </Tooltip>
+          </span>
+          <ul className="flex items-center flex-row gap-2 h-full">
+            <li className="flex items-center h-full">
+              <a href="#home" className="flex items-center flex-row gap-1.25 h-full">
+                <IoHome/>
+                <span>Início</span>
+              </a>
+            </li>
+            <li className="flex items-center h-full">
+              <button type="button" onClick={toggleTheme} className="flex items-center flex-row gap-1.25 h-full">
+                <IoContrast/>
+                <span>{btnContrast}</span>
+              </button>
+            </li>
+            {/* <li className="menu-contact w-full">
+              <ul className="w-full text-sm">
+                <li>
+                  <a href="#" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 !pl-[1rem] !py-[1rem]">
+                    <MdPhone className="text-[1rem]" />
+                    <span>(81) 98888-8888</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:jnet.contato@hotmail.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 !pl-[1rem] !py-[1rem]">
+                    <MdEmail className="text-[1rem]" />
+                    <span>jnet.contato@hotmail.com</span>
+                  </a>
+                </li> 
+              </ul>
+            </li>*/}
+          </ul>
+        </nav>
+      </div>
+      <aside className="h-aside flex items-center justify-center bg-[var(--bg-1)] text-[var(--text-color)] transition-colors duration-300 h-[56px] w-full overflow-x-clip">
+        <nav className="flex items-center justify-between h-full w-full max-w-[1000px] !py-0.75">
+          <div className="flex items-center h-full">
+            <img src={logo} alt="" loading="eager" decoding="sync" fetchPriority="high" className="bg-logo pointer-events-none transition-[filter] duration-300"/>
+            {/* <span className="text-[1.25rem] !font-sans !font-semibold tracking-tighter !leading-none"></span> */}
+          </div>
+          <ul id="menu" className="h-aside-nav flex items-center flex-row gap-4 h-full">
+            <li onClick={useCloseMenu} className="l-link">
+              <a href="tel:+5581984931028" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 h-full">
+                <HiPhone />
+                <span>{tel}</span>
+              </a>
+            </li>
+            <li onClick={useCloseMenu} className="l-link">
+              <a href={`https://api.whatsapp.com/send/?phone=5581984931028&text=${`
+                Olá, ${useMessage()}!
+                Gostaria de ser atendido, poderia me ajudar?
+                `}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 h-full">
+                <IoChatbubblesSharp />
+                <span>Fale conosco</span>
+              </a>
+            </li>
+            <li onClick={useCloseMenu} className="l-link">
+              <a href="#plans" className="flex items-center gap-1 h-full">
+                <FaFileSignature />
+                <span>Assine já</span>
+              </a>
+            </li>
+            <li className="l-others">
+              <ul className="flex gap-4 border-l">
+                <li onClick={useCloseMenu} className="l-link l-hidden">
+                  <a href="https://www.instagram.com/jnetultrafibra" title="Instagram" className="flex items-center gap-1 h-full" target="_blank" rel="noopener noreferrer">
+                    <RiInstagramFill />
+                    <span>Instagram</span>
+                  </a>
+                </li>
+                {/* <li onClick={useCloseMenu} className="l-link l-hidden">
+                  <a href="#plans" title="Facebook" className="flex items-center gap-1 h-full">
+                    <MdFacebook />
+                    <span>Facebook</span>
+                  </a>
+                </li> */}
+              </ul>
+            </li>
+          </ul>
           <button title="Menu" id="mobile-menu" className="flex items-center justify-center flex-col" onClick={useCloseMenu}>
             <div className="line-top"></div>
             <div className="line-middle"></div>
             <div className="line-bottom"></div>
           </button>
-          <ul id="menu" className="flex flex-row gap-4 h-full z-[-1]">
-            <li onClick={useCloseMenu} className="li-link"><a href="#home">Início</a></li>
-            <li onClick={useCloseMenu} className="li-link"><a href="#plans">Planos</a></li>
-            <li onClick={useCloseMenu} className="li-link"><a href="#doubts">Dúvidas</a></li>
-            <li onClick={useCloseMenu} className="li-link"><a href="#contact">Contato</a></li>
-            <li className="menu-contact w-full">
-              <ul className="w-full text-sm">
-                <li className="flex items-center gap-2 !pl-[1rem] !py-[1rem]"><MdPhone className="text-[1rem]" /><a href="#">(81) 98888-8888</a></li>
-                <li className="flex items-center gap-2 !pl-[1rem] !py-[1rem]"><MdEmail className="text-[1rem]" /><a href="mailto:jnet.contato@hotmail.com">jnet.contato@hotmail.com</a></li>
-              </ul>
-            </li>
-          </ul>
         </nav>
-      </div>
-      <aside className="h-aside flex items-center justify-center w-full">
-        <div className="flex items-center justify-between h-full w-full max-w-[1000px] !py-0.75">
-          <div className="flex items-center h-full">
-            <img src={Logo} alt="" loading="eager" decoding="sync" fetchPriority="high" className="bg-logo pointer-events-none"/>
-            <span className="text-[1.25rem] !font-sans !font-semibold tracking-tighter !leading-none"></span>
-          </div>
-          <div className="h-aside-nav flex gap-2.5">
-            <a href="tel:+5581988889999" target="_blank" rel="noreferrer" className="sm:hidden flex items-center gap-1 h-full"><HiPhone /><span>Ligar</span></a>
-            <a href="https://www.whatsapp.com" target="_blank" rel="noreferrer" className="{hidden sm:flex} flex items-center gap-1 h-full"><IoChatbubblesSharp /><span>Atendimento ágil</span></a>
-          </div>
-        </div>
       </aside>
     </header>
   )

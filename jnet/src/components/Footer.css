@@ -1,15 +1,19 @@
 div#footer {
-  border-top: 2px solid #808080;
+  /* border-top: 2px solid #808080; */
 
   padding: 2rem 2rem;
 }
 
-div.f-content li {
+div.f-content a {
   transition: color .3s ease-in-out;
 
   &:hover {
-    color: #b6b6b6;
+    text-decoration: underline;
   }
+}
+
+div.adress-limit {
+  width: 200px;
 }
 
 @media (max-width: 768px) {
@@ -35,8 +39,12 @@ div.f-content li {
   }
 
   div.f-label {
-    align-items: start;
+    align-items: flex-start;
     flex-direction: column;
     gap: 6px;
+  }
+
+  div.adress-limit {
+    width: auto;
   }
 }

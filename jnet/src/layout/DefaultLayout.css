@@ -7,7 +7,7 @@ div#overlay {
     display: flex;
 
     background-color: transparent;
-    backdrop-filter: blur(1px);
+    backdrop-filter: blur(.075rem);
 
     visibility: hidden;
 
