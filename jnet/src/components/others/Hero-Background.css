@@ -15,10 +15,6 @@ div.home-bg {
   border-bottom: 2px solid #808080;
 }
 
-/* div.wallpaper {
-  background-image: url(https://img.freepik.com/premium-photo/internet-things-background_34629-827.jpg);
-} */
-
 img.home-img {
   position: absolute;
   bottom: 0;
@@ -88,10 +84,6 @@ img.home-icons:nth-child(2) {
 }
 
 @media (max-width: 767px) {
-  /* img.fund {
-
-  } */
-
   img.home-img {
     bottom: -3.4%;
     left: 50%;

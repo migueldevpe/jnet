@@ -1,4 +1,4 @@
-import "./Footer.css" ;
+import "./Footer.css";
 
 import footerImg from "../assets/images/jnet-footer.webp";
 

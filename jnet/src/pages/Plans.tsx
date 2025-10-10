@@ -1,8 +1,8 @@
 import "./Plans.css";
 
-import imgCard1 from "../assets/images/cardMen.webp"
-import imgCard2 from "../assets/images/cardGirl.webp"
-import imgCard3 from "../assets/images/cardBoy.webp"
+import imgCard1 from "../assets/images/cardMen.webp";
+import imgCard2 from "../assets/images/cardGirl.webp";
+import imgCard3 from "../assets/images/cardBoy.webp";
 import useMessage from "../hooks/useMessage.ts";
 
 import { MdHeadsetMic, MdOutlineFileDownload, MdOutlineFileUpload, MdStar, MdWifi } from "react-icons/md";
@@ -15,6 +15,7 @@ const Card = React.lazy(() => import("../components/card/Card.tsx"));
 export default function Plans() {
 
   return (
+
     <div id="plans" className="bg-s flex justify-center w-full bg-[var(--bg-2)] text-[var(--text-color)] transition-colors duration-300">
       <section className="w-full max-w-[1000px]">
         <div className="plans-content flex flex-col gap-10 w-full">
@@ -125,6 +126,7 @@ export default function Plans() {
         </div>
       </section>
     </div>
+    
   )
 
 }

@@ -1,6 +1,6 @@
 import "./Accordion.css";
-import { useState, useEffect } from "react";
 
+import { useState, useEffect } from "react";
 import { FiMinus, FiPlus } from "react-icons/fi";
 
 interface AccordionProps {
@@ -21,6 +21,7 @@ export default function Accordion({ title, children, isOpen, onToggle }: Accordi
   }, [isOpen]);
 
   return (
+
     <div className={`accordion-root w-full ${isOpen ? "active" : ""}`}>
       <button type="button" className="accordion-header flex items-center justify-between gap-2" onClick={onToggle} aria-expanded={isOpen}>
         <span className="text-start">{title}</span>
@@ -32,6 +33,7 @@ export default function Accordion({ title, children, isOpen, onToggle }: Accordi
         {children}
       </div>
     </div>
+
   )
 
 }

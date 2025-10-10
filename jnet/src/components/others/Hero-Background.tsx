@@ -1,9 +1,9 @@
 import "./Hero-Background.css";
 
-import ImgLG from "/hero/homemLG.webp?url"
+import ImgLG from "/hero/homemLG.webp?url";
 import ImgSM from "/hero/homemSM.webp?url";
-import FundLG from "/hero/fundLG.webp?url"
-import FundSM from "/hero/fundSM.webp?url"
+import FundLG from "/hero/fundLG.webp?url";
+import FundSM from "/hero/fundSM.webp?url";
 
 //import { useEffect, useState } from "react";
 
@@ -44,7 +44,6 @@ export default function HeroBackground() {
                 <source srcSet={ImgSM} media="(max-width: 767px)"/>
                 <img src={ImgLG} alt="" className="home-img h-full w-full object-cover pointer-events-none aspect-[500/438] md:aspect-[500/448]" loading="eager" decoding="sync" fetchPriority="high" />
               </picture>
-              
               <img src="/hero/modem.webp" alt="" className="home-icons absolute left-[clamp(5px,2.5vw,45px)] top-[60px] md:left-[120px] md:top-[30px] h-[95px] w-[95px] aspect-square pointer-events-none" loading="eager" decoding="sync" fetchPriority="high" />
               <img src="/hero/wifi.webp" alt="" className="home-icons absolute right-[clamp(32px,8vw,70px)] top-[35px] md:left-0 md:top-[unset] md:bottom-[60px] h-[65px] w-[65px] aspect-square pointer-events-none" loading="eager" decoding="sync" fetchPriority="high" />
             </div>

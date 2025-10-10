@@ -5,6 +5,7 @@ import AccordionGroup from "../components/accordion/AccordionGroups.tsx";
 export default function Doubts() {
 
   return (
+
     <div id="doubts" className="bg-s flex justify-center w-full bg-[var(--bg-1)] text-[var(--text-color)] transition-colors duration-300">
       <section className="flex flex-col gap-10 w-full max-w-[1000px]">
       <div>
@@ -16,6 +17,7 @@ export default function Doubts() {
       </div>
       </section>
     </div>
+    
   )
 
 }

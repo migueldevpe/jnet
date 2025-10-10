@@ -98,22 +98,6 @@ export default function Header() {
                 <span>{btnContrast}</span>
               </button>
             </li>
-            {/* <li className="menu-contact w-full">
-              <ul className="w-full text-sm">
-                <li>
-                  <a href="#" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 !pl-[1rem] !py-[1rem]">
-                    <MdPhone className="text-[1rem]" />
-                    <span>(81) 98888-8888</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="mailto:jnet.contato@hotmail.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 !pl-[1rem] !py-[1rem]">
-                    <MdEmail className="text-[1rem]" />
-                    <span>jnet.contato@hotmail.com</span>
-                  </a>
-                </li> 
-              </ul>
-            </li>*/}
           </ul>
         </nav>
       </div>

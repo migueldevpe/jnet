@@ -7,6 +7,7 @@ import { FaWhatsapp } from "react-icons/fa";
 export default function WhatsApp() {
 
   return (
+
     <div className="button-wrapper fixed right-5 bottom-5 z-10">
       <a className="whatsapp flex flex-row items-center" title="WhatsApp" href={`https://api.whatsapp.com/send/?phone=5581984931028&text=${encodeURIComponent(`
         Olá, ${useMessage()}!
@@ -19,6 +20,7 @@ export default function WhatsApp() {
       </a>
       <div className="w-notification flex items-center justify-center absolute top-[-5px] right-0 font-bold">1</div>
     </div>
+    
   )
 
 }

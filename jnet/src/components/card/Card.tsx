@@ -1,4 +1,4 @@
-import "./Card.css"
+import "./Card.css";
 
 import Tooltip from "../Tooltip";
 
@@ -22,6 +22,7 @@ interface CardProps {
 export default function Card({ children, label="-", title="MEGA", desc="-", listItems, valor="00,00", img, others_style={"--border-card-color": "#005dfe", "--button-fade-1": "#1010fe", "--button-fade-2": "#005dfe"} as React.CSSProperties, tooltip_text="Vazio", w_message }: CardProps) {
 
   return (
+
     <div className="card flex flex-col shrink-0 relative bg-[var(--bg-1)]" style={others_style}>
       <div className="wrapper-img absolute inset-0 overflow-hidden rounded-[10px] pointer-events-none z-0">
         <img src="/hero/jnet-logo.webp" alt="Logo" className="jnet-icon"/>
@@ -56,6 +57,7 @@ export default function Card({ children, label="-", title="MEGA", desc="-", list
       </div>
       <a className="choose-plan flex items-center justify-center flex-1 w-full self-center text-2xl font-semibold text-[1.25rem]" title="Ir para WhatsApp." href={`https://api.whatsapp.com/send/?phone=5581984931028&text=${encodeURIComponent(w_message as string)}&app_absent=0`} target="_blank" rel="noopener noreferrer"><span>Assinar plano</span></a>
     </div>
+
   )
 
 }

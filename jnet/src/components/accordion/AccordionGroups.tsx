@@ -43,6 +43,7 @@ export default function AccordionGroup() {
   const { openStates, toggleAccordion } = useAccordionActive(accordions.length, 2);
 
   return (
+
     <>
       {accordions.map(( acc, index ) => (
         <Accordion
@@ -55,6 +56,7 @@ export default function AccordionGroup() {
         </Accordion>
       ))}
     </>
+    
   )
 
 }
