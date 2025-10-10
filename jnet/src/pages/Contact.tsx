@@ -21,13 +21,33 @@ export default function Contact() {
             <div className="c-list flex">
               <div>
                 <ul className="flex flex-col gap-4">
-                  <li><a href={`https://api.whatsapp.com/send/?phone=5581984931028&text=${`
-                    Olá, ${useMessage()}!
-                    Gostaria de ser atendido, poderia me ajudar?
-                    `}`} target="_blank" rel="noopener noreferrer" className="contact-l flex items-center gap-2"><MdWhatsapp /><span className="font-medium">WhatsApp</span></a></li>
-                  <li><a href="https://www.instagram.com/jnetultrafibra" target="_blank" rel="noopener noreferrer" className="contact-l flex items-center gap-2"><FaInstagram /><span className="font-medium">Instagram</span></a></li>
-                  <li><a href="tel:+5581984931028" target="_blank" rel="noopener noreferrer" className="contact-l flex items-center gap-2"><MdPhone /><span className="font-medium">(81) 9 8493-1028</span></a></li>
-                  {/* <li><a href="" target="_blank" rel="noopener noreferrer" className="contact-l flex items-center gap-2"><MdLocationOn/><span className="font-medium">Rua X, № X</span></a></li> */}
+                  <li>
+                    <a href={`https://api.whatsapp.com/send/?phone=5581984931028&text=${encodeURIComponent(
+                      `Olá, ${useMessage()}!
+                      Gostaria de ser atendido, poderia me ajudar?`.replace(/^(?!\s*$)\s+/gm, ''))}`
+                    } target="_blank" rel="noopener noreferrer" className="contact-l flex items-center gap-2">
+                      <MdWhatsapp />
+                      <span className="font-medium">WhatsApp</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/jnetultrafibra" target="_blank" rel="noopener noreferrer" className="contact-l flex items-center gap-2">
+                      <FaInstagram />
+                      <span className="font-medium">Instagram</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="tel:+5581984931028" target="_blank" rel="noopener noreferrer" className="contact-l flex items-center gap-2">
+                      <MdPhone />
+                      <span className="font-medium">(81) 9 8493-1028</span>
+                    </a>
+                  </li>
+                  {/* <li>
+                    <a href="" target="_blank" rel="noopener noreferrer" className="contact-l flex items-center gap-2">
+                      <MdLocationOn/>
+                      <span className="font-medium">Rua X, № X</span>
+                    </a>
+                  </li> */}
                 </ul>
               </div>
             </div>
@@ -39,7 +59,7 @@ export default function Contact() {
         </div>
       </section>
     </div>
-    
+
   )
 
 }

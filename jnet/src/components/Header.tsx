@@ -116,10 +116,10 @@ export default function Header() {
               </a>
             </li>
             <li onClick={useCloseMenu} className="l-link">
-              <a href={`https://api.whatsapp.com/send/?phone=5581984931028&text=${`
-                Olá, ${useMessage()}!
-                Gostaria de ser atendido, poderia me ajudar?
-                `}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 h-full">
+              <a href={`https://api.whatsapp.com/send/?phone=5581984931028&text=${encodeURIComponent(
+                `Olá, ${useMessage()}!
+                Gostaria de ser atendido, poderia me ajudar?`.replace(/^(?!\s*$)\s+/gm, ''))}`
+              } target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 h-full">
                 <IoChatbubblesSharp />
                 <span>Fale conosco</span>
               </a>
