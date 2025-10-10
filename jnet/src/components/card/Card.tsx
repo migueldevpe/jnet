@@ -37,7 +37,7 @@ export default function Card({ children, label="-", title="MEGA", desc="-", list
           </Tooltip>                  
         </div>
       </div>
-      <div className="flex flex-col gap-8 !p-4 !pt-0 !px-5 text-outline z-1">
+      <div className="flex flex-col gap-8 h-full w-full !p-4 !pt-0 !px-5 text-outline z-1">
         <div className="relative">
           <h2 className="text-[var(--card-price-plan)] transition-colors duration-300 text-[2rem] uppercase font-bold tracking-tight">{title}</h2>
           <h3 className="flex flex-row gap-1 text-[var(--card-other-text-plan)] transition-colors duration-300 text-sm"><MdWifiTethering />{desc}</h3>
@@ -48,14 +48,14 @@ export default function Card({ children, label="-", title="MEGA", desc="-", list
             {listItems}
           </ul>
         </div>
-        <span className="card-price flex items-baseline text-[var(--card-other-text-plan)] transition-colors duration-300 font-bold">
+        <span className="card-price flex items-baseline text-[var(--card-other-text-plan)] transition-colors duration-300 font-bold !mt-auto">
           R$<strong className="text-[var(--text-color)] transition-colors duration-300">{valor}</strong>/mês
         <Tooltip label="Lembre-se, a velocidade de conexão pode ter oscilações e variações conforme fatores externos, condições topográficas e/ou climáticas, movimento, distância e/ou número de clientes usando a mesma antena, do modo usado na conexão, das aplicações ou dos sites." style={{ "--tooltip-hover-x": "50%", "--tooltip-hover-y": "-8.75rem", "textShadow": "none" } as React.CSSProperties} p_arrow_tooltip="t-arrow-bottom">
           <IoMdInformationCircle className="!ml-1 text-[var(--text-color)] transition-colors duration-300 text-[1rem] cursor-help svg-outline" />
         </Tooltip>
         </span>
       </div>
-      <a className="choose-plan flex items-center justify-center flex-1 w-full self-center text-2xl font-semibold text-[1.25rem]" title="Ir para WhatsApp." href={`https://api.whatsapp.com/send/?phone=5581984931028&text=${encodeURIComponent(w_message as string)}&app_absent=0`} target="_blank" rel="noopener noreferrer"><span>Assinar plano</span></a>
+      <a className="choose-plan flex items-center justify-center flex-1 max-h-[44px] w-full self-center text-2xl font-semibold text-[1.25rem]" title="Ir para WhatsApp." href={`https://api.whatsapp.com/send/?phone=5581984931028&text=${encodeURIComponent(w_message as string)}&app_absent=0`} target="_blank" rel="noopener noreferrer"><span>Assinar plano</span></a>
     </div>
 
   )

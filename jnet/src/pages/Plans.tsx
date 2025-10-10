@@ -5,7 +5,7 @@ import imgCard2 from "../assets/images/cardGirl.webp";
 import imgCard3 from "../assets/images/cardBoy.webp";
 import useMessage from "../hooks/useMessage.ts";
 
-import { MdHeadsetMic, MdOutlineFileDownload, MdOutlineFileUpload, MdStar, MdWifi } from "react-icons/md";
+import { MdHeadsetMic, MdOutlineFileDownload, MdOutlineFileUpload, MdStar, MdTv, MdWifi } from "react-icons/md";
 import { PiToolbox } from "react-icons/pi";
 import { FaArrowRight } from "react-icons/fa6";
 import React, { Suspense } from "react";
@@ -46,12 +46,12 @@ export default function Plans() {
                   valor="54,99"
                   img={imgCard1}
                   tooltip_text="Ideal para quem usa redes sociais, assiste vídeos em HD e conecta até 2 dispositivos sem travar."
-                  w_message={`
-                    Olá, ${useMessage()}!
-                    Gostaria de solicitar a disponibilidade do plano *Básico* em minha região.
+                  w_message={
+                  `Olá, ${useMessage()}!
+                  Gostaria de solicitar a disponibilidade do plano *Básico* em minha região.
 
-                    Meu *CEP*:
-                  `}
+                  Meu *CEP*:`.replace(/^\s+/gm, '')
+                  }
                 />
                 </Suspense>
               <Suspense fallback={
@@ -67,6 +67,7 @@ export default function Plans() {
                     <>
                       <li className="flex flex-row gap-1.5"><PiToolbox />Instalação</li>
                       <li className="flex flex-row gap-1.5"><MdWifi />100% Fibra Ótica</li>
+                      <li className="flex flex-row gap-1.5"><MdTv />Canais Premium</li>
                       <li className="flex flex-row gap-1.5"><MdOutlineFileDownload />Download 200Mbps</li>
                       <li className="flex flex-row gap-1.5"><MdOutlineFileUpload />Upload 200Mbps</li>
                       <li className="flex flex-row gap-1.5"><MdHeadsetMic />Suporte 24h</li>
@@ -75,12 +76,12 @@ export default function Plans() {
                   valor="64,99"
                   img={imgCard2}
                   tooltip_text="Perfeito para famílias pequenas, chamadas de vídeo, jogos online e streaming em alta qualidade."
-                  w_message={`
-                    Olá, ${useMessage()}!
-                    Gostaria de solicitar a disponibilidade do plano *Mega* em minha região.
+                  w_message={
+                  `Olá, ${useMessage()}!
+                  Gostaria de solicitar a disponibilidade do plano *Mega* em minha região.
 
-                    Meu *CEP*:
-                  `}
+                  Meu *CEP*:`.replace(/^\s+/gm, '')
+                }
                 />
               </Suspense>
               <Suspense fallback={
@@ -96,6 +97,7 @@ export default function Plans() {
                     <>
                       <li className="flex flex-row gap-1.5"><PiToolbox />Instalação</li>
                       <li className="flex flex-row gap-1.5"><MdWifi />100% Fibra Ótica</li>
+                      <li className="flex flex-row gap-1.5"><MdTv />Canais Premium</li>
                       <li className="flex flex-row gap-1.5"><MdOutlineFileDownload />Download 400Mbps</li>
                       <li className="flex flex-row gap-1.5"><MdOutlineFileUpload />Upload 400Mbps</li>
                       <li className="flex flex-row gap-1.5"><MdHeadsetMic />Suporte 24h</li>
@@ -105,12 +107,12 @@ export default function Plans() {
                   img={imgCard3}
                   others_style={{"--border-card-color": "orange", "--button-fade-1": "#ffa600", "--button-fade-2": "#ffc65c"} as React.CSSProperties}
                   tooltip_text="Feito para casas com muitos dispositivos, home office, streaming em 4K e máxima performance online."
-                  w_message={`
-                    Olá, ${useMessage()}!
-                    Gostaria de solicitar a disponibilidade do plano *Família* em minha região.
-
-                    Meu *CEP*:
-                  `}
+                  w_message={
+                  `Olá, ${useMessage()}!
+                  Gostaria de solicitar a disponibilidade do plano *Família* em minha região.
+                  
+                  Meu *CEP*:`.replace(/^\s+/gm, '')
+                  }
                 >
                   <MdStar className="card-star absolute top-2.5 right-2.5 text-[#ffa600]" size={24}/>
                 </Card>
@@ -126,7 +128,7 @@ export default function Plans() {
         </div>
       </section>
     </div>
-    
+
   )
 
 }
