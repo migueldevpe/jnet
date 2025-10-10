@@ -10,7 +10,7 @@ export default function Contact() {
 
   return (
 
-    <div id="contact" className="bg-s flex justify-center bg-[var(--bg-1)] text-[var(--text-color)] transition-colors duration-300 w-full">
+    <div id="contact" className="bg-s flex justify-center bg-[var(--bg-2)] text-[var(--text-color)] transition-colors duration-300 w-full">
       <section className="flex flex-col gap-4 w-full max-w-[1000px]">
         <div className="contact-root flex flex-row gap-8">
           <div className="contact-content w-6/12">
