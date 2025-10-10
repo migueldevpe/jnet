@@ -31,11 +31,60 @@ section.home-text-bg {
 } */
 
 section.home-content {
-  padding: clamp(1.5rem, 4vh, 2rem) 0;
+  padding: var(--padding-section-y) 0;
 }
 
 img.loading-logo {
   filter: brightness(0.5);
 
   animation: loading 2s ease-in-out infinite;
+}
+
+picture.home-content-img img {
+  filter: drop-shadow(4px 8px 6px var(--shadow-imgs));
+  transition: filter .3s ease-in-out;
+}
+
+aside.home-content-aside li {
+  display: flex;
+  gap: 6px;
+  transition: transform .3s ease-in-out;
+
+  svg {
+    color: #005dfe;
+  }
+
+  &:hover {
+    transform: translateX(2px);
+  }
+}
+
+img.mask-image {
+  mask-image: url('/hero/jnet-logo.webp');
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  background-color: var(--jnet-title);
+  transition: background-color .3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  section.home-content {
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+
+  picture.home-content-img {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  picture.home-content-img img {
+    width: 400px;
+    min-width: unset;
+  }
+
+  div.home-content-text {
+    width: 100%;
+  }
 }

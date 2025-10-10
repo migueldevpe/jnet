@@ -11,14 +11,16 @@ import useCloseMenu from "../hooks/useCloseMenu";
 export default function DefaultLayout() {
 
   return (
-    <main className="flex items-center flex-col w-full">
+    <>
+      <main className="flex items-center flex-col w-full">
+        <Home />
+        <Plans />
+        <Doubts />
+        <Contact/>
+        <WhatsApp />
+      </main>
       <div onClick={useCloseMenu} id="overlay" className="fixed inset-0 h-full w-full z-2"></div>
-      <Home />
-      <Plans />
-      <Doubts />
-      <Contact/>
-      <WhatsApp />
-    </main>
+    </>
   )
 
 }

@@ -41,6 +41,8 @@
   --card-other-text-plan: #646464;
   --bg-loading: #dadada;
   --link: #0066cc;
+  --jnet-title: #005dfe;
+  --shadow-imgs: #00000026;
 }
 
 [data-theme="dark"] {
@@ -59,6 +61,8 @@
   --card-other-text-plan: #8c8c8c;
   --bg-loading: #252525;
   --link: #1A8CFF;
+  --jnet-title: #1A8CFF;
+  --shadow-imgs: #005eff26;
 }
 
 .text-outline {

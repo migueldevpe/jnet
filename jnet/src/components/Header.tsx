@@ -1,7 +1,7 @@
 import "./Header.css";
 
-import logoLG from "/hero/jnet-headerLG.webp?url"
-import logoSM from "/hero/jnet-headerSM.webp?url"
+import logoLG from "/hero/jnet-headerLG.webp?url";
+import logoSM from "/hero/jnet-headerSM.webp?url";
 import Tooltip from "./Tooltip";
 import useCloseMenu from "../hooks/useCloseMenu";
 import useMessage from "../hooks/useMessage"; 
@@ -17,7 +17,7 @@ import { RiInstagramFill } from "react-icons/ri";
 
 export default function Header() {
   const [ tel, setTel ] = useState<string>( window.innerWidth <= 767 ? "Ligar" : "(81) 9 8493-1028" );
-  const [ logo, setLogo ] = useState<string>(logoLG);
+  //const [ logo, setLogo ] = useState<string>(logoLG);
   const [ btnContrast, setBtnContrast ] = useState<string>( window.innerWidth <= 375 ? "Contraste" : "Alto contraste" );
 
   useEffect(() => {
@@ -36,21 +36,21 @@ export default function Header() {
     return () => window.removeEventListener("resize", toggleTel);
   }, []);
 
-  useEffect(() => {
-    function toggleLogo() {
-      if (window.innerWidth <= 500) {
-        setLogo(logoSM);
-      } else {
-        setLogo(logoLG);
-      }
-    };
+  // useEffect(() => {
+  //   function toggleLogo() {
+  //     if (window.innerWidth <= 500) {
+  //       setLogo(logoSM);
+  //     } else {
+  //       setLogo(logoLG);
+  //     }
+  //   };
 
-    toggleLogo();
+  //   toggleLogo();
 
-    window.addEventListener("resize", toggleLogo);
+  //   window.addEventListener("resize", toggleLogo);
 
-    return () => window.removeEventListener("resize", toggleLogo);
-  },[])
+  //   return () => window.removeEventListener("resize", toggleLogo);
+  // },[])
 
   useEffect(() => {
     function toggleBtnContrast() {
@@ -75,7 +75,7 @@ export default function Header() {
       <div className="header-content flex items-center justify-center fixed top-0 h-full max-h-[40px] w-full bg-[#005dfe] text-white !px-2 z-10">
         <nav className="flex flex-row items-center justify-between gap-2 h-full w-full max-w-[1000px] !py-[.5rem]">
           <span className="jnet-pin relative">
-            <Tooltip label="Atendendo Recife, Olinda e Região." show={{ "--tooltip-hover-y": "1.75rem", "--tooltip-hover-x": "50%" } as React.CSSProperties} p_arrow_tooltip="t-arrow-top">
+            <Tooltip label="Atendendo Recife, Olinda e Região. Consulte a disponibilidade em sua localização." style={{ "--tooltip-hover-y": "1.75rem", "--tooltip-hover-x": "50%" } as React.CSSProperties} p_arrow_tooltip="t-arrow-top">
               <div className="flex items-center">
                 <img src="/hero/jnet-logo.webp" alt="" className="h-[1.25em] w-[1.25em] pointer-events-none" loading="eager" decoding="sync" fetchPriority="high" />            
                 <span className="!ml-1.5 text-nowrap">
@@ -93,7 +93,7 @@ export default function Header() {
               </a>
             </li>
             <li className="flex items-center h-full">
-              <button type="button" onClick={toggleTheme} className="flex items-center flex-row gap-1.25 h-full">
+              <button type="button" onClick={toggleTheme} className="flex items-center flex-row gap-1.25 h-full cursor-pointer">
                 <IoContrast/>
                 <span>{btnContrast}</span>
               </button>
@@ -119,10 +119,11 @@ export default function Header() {
       </div>
       <aside className="h-aside flex items-center justify-center bg-[var(--bg-1)] text-[var(--text-color)] transition-colors duration-300 h-[56px] w-full overflow-x-clip">
         <nav className="flex items-center justify-between h-full w-full max-w-[1000px] !py-0.75">
-          <div className="flex items-center h-full">
-            <img src={logo} alt="" loading="eager" decoding="sync" fetchPriority="high" className="bg-logo pointer-events-none transition-[filter] duration-300"/>
+          <picture className="flex items-center h-full">
+            <source srcSet={logoSM} media="(max-width: 500px)"/>
+            <img src={logoLG} alt="" loading="eager" decoding="sync" fetchPriority="high" className="bg-logo pointer-events-none transition-[filter] duration-300"/>
             {/* <span className="text-[1.25rem] !font-sans !font-semibold tracking-tighter !leading-none"></span> */}
-          </div>
+          </picture>
           <ul id="menu" className="h-aside-nav flex items-center flex-row gap-4 h-full">
             <li onClick={useCloseMenu} className="l-link">
               <a href="tel:+5581984931028" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 h-full">

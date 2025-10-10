@@ -9,9 +9,9 @@ import useMessage from "../hooks/useMessage";
 export default function Contact() {
 
   return (
-    <div id="contact" className="bg-s flex justify-center bg-[var(--bg-2)] text-[var(--text-color)] transition-colors duration-300 w-full">
+    <div id="contact" className="bg-s flex justify-center bg-[var(--bg-1)] text-[var(--text-color)] transition-colors duration-300 w-full">
       <section className="flex flex-col gap-4 w-full max-w-[1000px]">
-        <div className="contact-root flex flex-row gap-4">
+        <div className="contact-root flex flex-row gap-8">
           <div className="contact-content w-6/12">
             <div className="!mb-4">
               <h1 className="text-3xl font-semibold !mb-2">Fale conosco</h1>
@@ -31,9 +31,10 @@ export default function Contact() {
               </div>
             </div>
           </div>
-          <div className="c-content-img self-center w-6/12">
-            <img src={contactImg} alt="#" loading="lazy" decoding="async" fetchPriority="low" className="c-img w-full object-cover aspect-square pointer-events-none"/>
-          </div>
+          <picture className="c-content-img flex w-6/12">
+            {/* <source srcSet="#" media="(max-width: 768px)"/> */}
+            <img src={contactImg} alt="#" loading="lazy" decoding="async" fetchPriority="low" className="h-full w-full min-w-[375px] object-cover aspect-[1024/960] pointer-events-none"/>
+          </picture>
         </div>
       </section>
     </div>

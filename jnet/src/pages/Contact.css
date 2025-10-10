@@ -4,10 +4,9 @@ div#contact {
   scroll-margin-top: 40px;
 }
 
-img.c-img {
-  filter: drop-shadow(8px 4px 6px #0000004d);
-
-  margin-top: -2%;
+picture.c-content-img img {
+  filter: drop-shadow(8px 4px 6px var(--shadow-imgs));
+  transition: filter .3s ease-in-out;
 }
 
 a.contact-l {
@@ -25,13 +24,8 @@ a.contact-l {
   }
 }
 
-div.contact-content {
-  width: 100%;
-}
-
 div.c-list,
-div.c-list div,
-div.c-content-img {
+div.c-list div {
   width: 100%;
 }
 
@@ -61,10 +55,22 @@ a.contact-l span {
 
   div.contact-root {
     flex-direction: column;
+    gap: 1.4rem;
   }
 
-  img.c-img {
-    max-width: 375px;
-    margin: auto;
+  picture.c-content-img {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+  }
+
+  picture.c-content-img img {
+    max-width: 400px;
+    min-width: unset;
+  }
+
+  div.contact-content {
+    width: 100%;
   }
 }

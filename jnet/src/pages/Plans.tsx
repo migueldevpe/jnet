@@ -81,7 +81,7 @@ export default function Plans() {
                     Meu *CEP*:
                   `}
                 />
-                </Suspense>
+              </Suspense>
               <Suspense fallback={
                 <div className="flex items-center justify-center shrink-0 bg-[var(--bg-loading)] border-[#808080] border-2 rounded-[15px] h-[380px] max-w-[300px] w-full">
                   <img src="/hero/jnet-logo.webp" alt="Carregando" className="loading-logo h-[100px] w-[100px]" loading="eager" decoding="sync" fetchPriority="high"/>

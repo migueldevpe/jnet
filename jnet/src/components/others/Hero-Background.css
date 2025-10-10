@@ -17,11 +17,6 @@ div.home-bg {
 
 div.wallpaper {
   /* background-image: url(https://img.freepik.com/premium-photo/internet-things-background_34629-827.jpg); */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-
-  aspect-ratio: 626 / 352;
 }
 
 img.home-img {
@@ -94,22 +89,20 @@ img.home-icons:nth-child(2) {
 
 @media (max-width: 767px) {
   img.fund {
-    object-fit: cover;
+
   }
 
   img.home-img {
-    bottom: -2.6%;
+    bottom: -3.4%;
     left: 50%;
     transform: translateX(-50%);
 
     height: auto;
-    min-height: 370px;
+    min-height: 375px;
     width: 100%;
-    max-width: 425px;
+    max-width: 430px;
 
-    object-fit: cover;
-
-    aspect-ratio: 800 / 700;
+    aspect-ratio: 500 / 438;
   }
 
   div.bg-text {

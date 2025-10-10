@@ -26,24 +26,22 @@ export default function Card({ children, label="-", title="MEGA", desc="-", list
       <div className="wrapper-img absolute inset-0 overflow-hidden rounded-[10px] pointer-events-none z-0">
         <img src="/hero/jnet-logo.webp" alt="Logo" className="jnet-icon"/>
         {children}
-        <div className="relative inset-0 h-full w-full">
-          <img src={img} alt="" loading="lazy" decoding="async" fetchPriority="low" className="card-people" />
-        </div>
+        <img src={img} alt="" loading="lazy" decoding="async" fetchPriority="low" className="card-people" />
       </div>
       <div className="relative !p-4 !px-5 z-2">
         <div className="flex justify-center gap-1">
           <span className="flex items-center text-[var(--card-other-text-plan)] transition-colors duration-300 text-sm font-semibold">{label}</span>
-          <Tooltip label={tooltip_text} show={{ "--tooltip-hover-x": "50%", "--tooltip-hover-y": "1.5rem" } as React.CSSProperties} p_arrow_tooltip="t-arrow-top">
+          <Tooltip label={tooltip_text} style={{ "--tooltip-hover-x": "50%", "--tooltip-hover-y": "1.5rem" } as React.CSSProperties} p_arrow_tooltip="t-arrow-top">
             <MdOutlineSpeed className="title-svg text-[1rem] cursor-help" />
           </Tooltip>                  
         </div>
       </div>
-      <div className="flex flex-col gap-8 !p-4 !pt-0 !px-5 text-outline">
+      <div className="flex flex-col gap-8 !p-4 !pt-0 !px-5 text-outline z-1">
         <div className="relative">
           <h2 className="text-[var(--card-price-plan)] transition-colors duration-300 text-[2rem] uppercase font-bold tracking-tight">{title}</h2>
           <h3 className="flex flex-row gap-1 text-[var(--card-other-text-plan)] transition-colors duration-300 text-sm"><MdWifiTethering />{desc}</h3>
         </div>
-        <div className="z-1">
+        <div>
           <h1 className="!pb-2.5 font-semibold text-[var(--text-color)] transition-colors duration-300">Inclui:</h1>
           <ul className="flex flex-col gap-2.5 text-[var(--card-other-text-plan)] transition-colors duration-300 text-sm">
             {listItems}
@@ -51,7 +49,7 @@ export default function Card({ children, label="-", title="MEGA", desc="-", list
         </div>
         <span className="card-price flex items-baseline text-[var(--card-other-text-plan)] transition-colors duration-300 font-bold">
           R$<strong className="text-[var(--text-color)] transition-colors duration-300">{valor}</strong>/mês
-        <Tooltip label="Lembre-se, a velocidade de conexão pode ter oscilações e variações conforme fatores externos, condições topográficas e/ou climáticas, movimento, distância e/ou número de clientes usando a mesma antena, do modo usado na conexão, das aplicações ou dos sites." show={{ "--tooltip-hover-x": "50%", "--tooltip-hover-y": "-8.75rem" } as React.CSSProperties} p_arrow_tooltip="t-arrow-bottom">
+        <Tooltip label="Lembre-se, a velocidade de conexão pode ter oscilações e variações conforme fatores externos, condições topográficas e/ou climáticas, movimento, distância e/ou número de clientes usando a mesma antena, do modo usado na conexão, das aplicações ou dos sites." style={{ "--tooltip-hover-x": "50%", "--tooltip-hover-y": "-8.75rem", "textShadow": "none" } as React.CSSProperties} p_arrow_tooltip="t-arrow-bottom">
           <IoMdInformationCircle className="!ml-1 text-[var(--text-color)] transition-colors duration-300 text-[1rem] cursor-help svg-outline" />
         </Tooltip>
         </span>

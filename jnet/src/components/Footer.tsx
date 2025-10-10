@@ -1,4 +1,6 @@
-import "./Footer.css" 
+import "./Footer.css" ;
+
+import footerImg from "../assets/images/jnet-footer.webp";
 
 export default function Footer() {
 
@@ -6,11 +8,11 @@ export default function Footer() {
 
     <div id="footer" className="bg-s flex flex-col items-center justify-center gap-4 bg-[#005dfe]">
       <div className="f-root flex flex-col gap-8 text-white w-full max-w-[1000px]">
-        <div className="f-content flex flex-row justify-between">
-          <div className="h-[80px] w-fit">
-            <img src="/hero/jnet-footer.webp" alt="Logo - JNet" className="h-full w-full aspect-[620/220] pointer-events-none" loading="lazy" decoding="async" fetchPriority="low"/>
-          </div>
-          <div className="flex flex-row gap-12">
+        <div className="f-content flex flex-row justify-between gap-4">
+          <picture className="h-[75px] max-w-fit">
+            <img src={footerImg} alt="Logo - JNet" className="h-full w-full aspect-[310/110] pointer-events-none" loading="lazy" decoding="async" fetchPriority="low"/>
+          </picture>
+          <div className="flex flex-row gap-6">
             <div>
               <h1 className="font-semibold">Acesso rápido</h1>
               <ul className="flex flex-col gap-2 !mt-2">
@@ -23,14 +25,14 @@ export default function Footer() {
             <div>
               <h1 className="font-semibold">Redes sociais</h1>
               <ul className="flex flex-col gap-2 !mt-2">
-                <a href="https://www.instagram.com/jnetultrafibra" target="_blank" rel="noopener noreferrer"><li>Instagram</li></a>
+                <li><a href="https://www.instagram.com/jnetultrafibra" target="_blank" rel="noopener noreferrer">Instagram</a></li>
                 {/* <li>Facebook</li> */}
               </ul>              
             </div>      
             <div className="adress-limit">
               <h1 className="font-semibold">Endereço</h1>
               <ul className="!mt-2">
-                <a href="https://maps.app.goo.gl/8eAhUmnC86E28Hw39" target="_blank" rel="noopener noreferrer"><li>Rua Visconde do Uruguai, 65 - Recife, PE | CEP 50610-700</li></a>
+                <li><a href="https://maps.app.goo.gl/8eAhUmnC86E28Hw39" target="_blank" rel="noopener noreferrer">Rua Visconde do Uruguai, 65 - Recife, PE | CEP 50610-700</a></li>
               </ul>              
             </div>
           </div>

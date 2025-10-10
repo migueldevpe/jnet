@@ -62,9 +62,9 @@ img.card-people {
   width: 75%;
   min-width: 260px;
   max-width: 335px;
-  aspect-ratio: 500 / 450;
+  aspect-ratio: 350 / 315;
 
-  z-index: -1;
+  z-index: 0;
 }
 
 span.card-price {
