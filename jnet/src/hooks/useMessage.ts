@@ -1,12 +1,15 @@
-export default function useMessage() {
+export default function useMessage(): string {
+  const horas: number = Number(new Date().toLocaleString("pt-BR", {
+    timeZone: "America/Sao_Paulo",
+    hour: "2-digit",
+    hour12: false
+  }));
 
-  const g = new Date();
-  const hora = g.getHours();
   let horário = "";
 
-  if (hora >= 6 && hora < 12) {
+  if (horas >= 6 && horas < 12) {
     horário = "bom dia";
-  } else if (hora >= 12 && hora < 18) {
+  } else if (horas >= 12 && horas < 18) {
     horário = "boa tarde";
   } else {
     horário = "boa noite";
