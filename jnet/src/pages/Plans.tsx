@@ -50,7 +50,7 @@ export default function Plans() {
                   `Olá, ${useMessage()}!
                   Gostaria de solicitar a disponibilidade do plano *Básico* em minha região.
 
-                  Meu *CEP*:`.replace(/^\s+/gm, '')
+                  Meu *CEP*:`.replace(/^(?!\s*$)\s+/gm, '')
                   }
                 />
                 </Suspense>
@@ -80,7 +80,7 @@ export default function Plans() {
                   `Olá, ${useMessage()}!
                   Gostaria de solicitar a disponibilidade do plano *Mega* em minha região.
 
-                  Meu *CEP*:`.replace(/^\s+/gm, '')
+                  Meu *CEP*:`.replace(/^(?!\s*$)\s+/gm, '')
                 }
                 />
               </Suspense>
@@ -111,7 +111,7 @@ export default function Plans() {
                   `Olá, ${useMessage()}!
                   Gostaria de solicitar a disponibilidade do plano *Família* em minha região.
                   
-                  Meu *CEP*:`.replace(/^\s+/gm, '')
+                  Meu *CEP*:`.replace(/^(?!\s*$)\s+/gm, '')
                   }
                 >
                   <MdStar className="card-star absolute top-2.5 right-2.5 text-[#ffa600]" size={24}/>
