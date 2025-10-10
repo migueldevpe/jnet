@@ -56,12 +56,12 @@ svg.title-svg {
 
 img.card-people {
   position: absolute;
-  right: -5rem;
+  right: -5.5rem;
   bottom: 44px;
 
   width: 95%;
   min-width: 260px;
-  max-width: 335px;
+  max-width: 320px;
   aspect-ratio: 350 / 315;
 
   z-index: 0;
