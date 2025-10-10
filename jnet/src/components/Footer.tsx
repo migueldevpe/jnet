@@ -9,8 +9,8 @@ export default function Footer() {
     <div id="footer" className="bg-s flex flex-col items-center justify-center gap-4 bg-[#005dfe]">
       <div className="f-root flex flex-col gap-8 text-white w-full max-w-[1000px]">
         <div className="f-content flex flex-row justify-between gap-4">
-          <picture className="h-[75px] max-w-fit">
-            <img src={footerImg} alt="Logo - JNet" className="h-full w-full aspect-[310/110] pointer-events-none" loading="lazy" decoding="async" fetchPriority="low"/>
+          <picture className="max-h-[75px] max-w-fit aspect-[310/110]">
+            <img src={footerImg} alt="Logo - JNet" className="h-full w-full object-contain aspect-[310/110] pointer-events-none" loading="lazy" decoding="async" fetchPriority="low"/>
           </picture>
           <div className="flex flex-row gap-6">
             <div>
