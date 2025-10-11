@@ -2,7 +2,7 @@
 
 <img src="https://cdn.jsdelivr.net/gh/migueldevpe/portfolio-p-images@6151b04c080b6b5adac0d0144f14713fdd1cab0e/readme's/mockupjnet.webp">
 
-Landing Page para Provedora de Internet
+Landing Page desenvolvida para a provedora de internet JNet, com foco em promover a marca e facilitar o contato/assinatura de planos para os clientes.
 
 <hr>
 
