@@ -1,2 +1,2 @@
-# jnet
-Landing Page - Provedor de Internet
+# JNet
+Landing Page para Provedora de Internet
