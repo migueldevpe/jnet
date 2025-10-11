@@ -30,7 +30,6 @@ Landing Page desenvolvida para a provedora de internet JNet, com foco em promove
     <ul type="circle">
       <b>
         <li>Google Fonts: Importação de fontes do Google</li>
-        <li>JSDelivr: Armazenamento de imagens</li>
         <li>React Icons: Importação de ícones [React]</li>
       </b>
     </ul>
