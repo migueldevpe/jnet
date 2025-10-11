@@ -28,9 +28,11 @@ Landing Page para Provedora de Internet
   <li>Linguagem de estilização: <b>CSS3 (Com Tailwind CSS)</b></li>
   <li>Recursos adicionais: 
     <ul type="circle">
-      <li><b>Google Fonts: Importação de fontes do Google</b></li>
-      <li><b>JSDelivr: Armazenamento de imagens</b></li>
-      <li><b>React Icons: Importação de ícones [React]</b></li>
+      <b>
+        <li>Google Fonts: Importação de fontes do Google</li>
+        <li>JSDelivr: Armazenamento de imagens</li>
+        <li>React Icons: Importação de ícones [React]</li>
+      </b>
     </ul>
   </li>
   <li>Controle de versão: <b>Git e GitHub Desktop</b></li>
