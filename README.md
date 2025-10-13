@@ -6,6 +6,8 @@ Landing Page desenvolvida para a provedora de internet JNet, com foco em promove
 
 <hr>
 
+<h3>Sumário</h3>
+
 <ul>
   <li><a href="#links">Links</a></li>
   <li><a href="#tecs">Tecnologias</a></li>  
@@ -15,7 +17,8 @@ Landing Page desenvolvida para a provedora de internet JNet, com foco em promove
 <h3 id="links">Links</h3>
 
 <ul type="disc">
-  <li><a href="https://jnet.vercel.app" target="_blank">Visitar site</a></li>
+  <li><a href="https://jnetfibra.com" target="_blank">Visitar site (Link 1)</a></li>
+  <li><a href="https://jnetfibra.vercel.app" target="_blank">Visitar site (Link 2)</a></li>
   <li><a href="https://github.com/migueldevpe/jnet" target="_blank">GitHub</a></li>
 </ul>
 
