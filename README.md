@@ -43,8 +43,9 @@ Landing Page desenvolvida para a provedora de internet JNet, com foco em promove
 <h3 id="author">Autor</h3>
 
 <ul>
+  <li><a href="https://miguelsoares.vercel.app/" target="_blank">Portfólio</a></li>
   <li><a href="https://www.linkedin.com/in/miguelsoaresabs/" target="_blank">LinkedIn</a></li>
-  <li><a href="https://github.com/migueldevpe" target="_blank">GitHub</a></li>
+  <li><a href="https://github.com/migueldevpe/" target="_blank">GitHub</a></li>
 </ul>
 
 JNet - 2025
