@@ -1,4 +1,4 @@
-div#home {
+section#home {
   scroll-margin-top: 120px;
 }
 
@@ -6,7 +6,7 @@ div.bg-s:nth-child(1) {
   padding: unset;
 }
 
-section.home-text-bg {
+div.home-text-bg:nth-child(1) {
   padding: clamp(1.5rem, 4vh, 2rem) 0;
 }
 
@@ -30,7 +30,7 @@ section.home-text-bg {
   }
 } */
 
-section.home-content {
+div.home-content {
   padding: var(--padding-section-y) 0;
 }
 
@@ -68,7 +68,7 @@ img.mask-image {
 }
 
 @media (max-width: 768px) {
-  section.home-content {
+  div.home-content {
     flex-direction: column;
     gap: 1.4rem;
   }

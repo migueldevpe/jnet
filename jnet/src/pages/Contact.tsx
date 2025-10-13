@@ -10,8 +10,8 @@ export default function Contact() {
 
   return (
 
-    <div id="contact" className="bg-s flex justify-center bg-[var(--bg-2)] text-[var(--text-color)] transition-colors duration-300 w-full">
-      <section className="flex flex-col gap-4 w-full max-w-[1000px]">
+    <section id="contact" className="bg-s flex justify-center bg-[var(--bg-2)] text-[var(--text-color)] transition-colors duration-300 w-full">
+      <div className="flex flex-col gap-4 w-full max-w-[1000px]">
         <div className="contact-root flex flex-row gap-8">
           <div className="contact-content w-6/12">
             <div className="!mb-4">
@@ -57,8 +57,8 @@ export default function Contact() {
             <img src={contactImg} alt="#" loading="lazy" decoding="async" fetchPriority="low" className="h-full w-full min-w-[375px] object-cover aspect-[1024/960] pointer-events-none"/>
           </picture>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
 
   )
 

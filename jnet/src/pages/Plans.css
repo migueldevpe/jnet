@@ -1,4 +1,4 @@
-div#plans {
+section#plans {
   padding: var(--padding-section-y) 2rem;
 
   scroll-margin-top: 40px;
@@ -38,7 +38,7 @@ svg.plans-arrow {
 }
 
 @media (max-width: 768px) {
-  div#plans {
+  section#plans {
     padding: var(--padding-section-y) 1.2rem;
   }
 
