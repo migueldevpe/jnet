@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.jnetfibra.com/
+Sitemap: https://www.jnetfibra.com/sitemap.xml
