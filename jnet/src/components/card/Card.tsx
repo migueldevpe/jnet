@@ -50,8 +50,8 @@ export default function Card({ children, label="-", title="MEGA", desc="-", list
         </div>
         <span className="card-price flex items-baseline text-[var(--card-other-text-plan)] transition-colors duration-300 font-bold !mt-auto">
           R$<strong className="text-[var(--text-color)] transition-colors duration-300">{valor}</strong>/mês
-        <Tooltip label="Lembre-se, a velocidade de conexão pode ter oscilações e variações conforme fatores externos, condições topográficas e/ou climáticas, movimento, distância e/ou número de clientes usando a mesma antena, do modo usado na conexão, das aplicações ou dos sites." style={{ "--tooltip-hover-x": "50%", "--tooltip-hover-y": "-8.75rem", "textShadow": "none" } as React.CSSProperties} p_arrow_tooltip="t-arrow-bottom">
-          <IoMdInformationCircle className="!ml-1 text-[var(--text-color)] transition-colors duration-300 text-[1rem] cursor-help svg-outline" />
+        <Tooltip label="Lembre-se, a velocidade de conexão pode ter oscilações e variações conforme fatores externos, condições topográficas e/ou climáticas, movimento, distância e/ou número de clientes usando a mesma antena, do modo usado na conexão, das aplicações ou dos sites." style={{ "--tooltip-hover-x": "50%", "--tooltip-hover-y": "-8.75rem", "textShadow": "none" } as React.CSSProperties} p_arrow_tooltip="t-arrow-bottom" content_styleClass="!ml-1">
+          <IoMdInformationCircle className="text-[var(--text-color)] transition-colors duration-300 text-[1rem] cursor-help svg-outline" />
         </Tooltip>
         </span>
       </div>
