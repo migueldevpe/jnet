@@ -29,7 +29,7 @@ export default function Home() {
         }>
         <HeroBackground />
       </Suspense>
-      <div className="bg-s flex justify-center w-full bg-[var(--bg-1)] text-[var(--text-color)] transition-colors duration-300">
+      <div className="bg-s flex justify-center w-full bg-[var(--bg-1)] text-[var(--text-color)] transition-colors ease-in-out duration-300">
         <div className="home-text-bg bg-s w-full max-w-[1000px]">
           <p className="text-justify hyphens-auto text-sm !leading-4.75">Conectar pessoas com qualidade e confiança é o que nos move. Na JNet, trabalhamos todos os dias para entregar uma internet estável, rápida e acessível — do jeito que você precisa, quando mais precisa.</p>
         </div>

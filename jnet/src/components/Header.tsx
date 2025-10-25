@@ -105,7 +105,7 @@ export default function Header() {
         <nav className="flex items-center justify-between h-full w-full max-w-[1000px] !py-0.75">
           <picture className="flex items-center h-full">
             <source srcSet={logoSM} media="(max-width: 500px)"/>
-            <img src={logoLG} alt="" loading="eager" decoding="sync" fetchPriority="high" className="bg-logo pointer-events-none transition-[filter] duration-300"/>
+            <img src={logoLG} alt="" loading="eager" decoding="sync" fetchPriority="high" className="bg-logo pointer-events-none transition-[filter] ease-in-out duration-300"/>
             {/* <span className="text-[1.25rem] !font-sans !font-semibold tracking-tighter !leading-none"></span> */}
           </picture>
           <ul id="menu" className="h-aside-nav flex items-center flex-row gap-4 h-full">

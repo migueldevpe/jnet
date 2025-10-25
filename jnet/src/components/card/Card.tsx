@@ -31,7 +31,7 @@ export default function Card({ children, label="-", title="MEGA", desc="-", list
       </div>
       <div className="relative !p-4 !px-5 z-2">
         <div className="flex justify-center gap-1">
-          <span className="flex items-center text-[var(--card-other-text-plan)] transition-colors duration-300 text-sm font-semibold">{label}</span>
+          <span className="flex items-center text-[var(--card-other-text-plan)] transition-colors ease-in-out duration-300 text-sm font-semibold">{label}</span>
           <Tooltip label={tooltip_text} style={{ "--tooltip-hover-x": "50%", "--tooltip-hover-y": "1.5rem" } as React.CSSProperties} p_arrow_tooltip="t-arrow-top">
             <MdOutlineSpeed className="title-svg text-[1rem] cursor-help" />
           </Tooltip>                  
@@ -39,19 +39,19 @@ export default function Card({ children, label="-", title="MEGA", desc="-", list
       </div>
       <div className="flex flex-col gap-8 h-full w-full !p-4 !pt-0 !px-5 text-outline z-1">
         <div className="relative">
-          <h2 className="text-[var(--card-price-plan)] transition-colors duration-300 text-[2rem] uppercase font-bold tracking-tight">{title}</h2>
-          <h3 className="flex flex-row gap-1 text-[var(--card-other-text-plan)] transition-colors duration-300 text-sm"><MdWifiTethering />{desc}</h3>
+          <h2 className="text-[var(--card-price-plan)] transition-colors ease-in-out duration-300 text-[2rem] uppercase font-bold tracking-tight">{title}</h2>
+          <h3 className="flex flex-row gap-1 text-[var(--card-other-text-plan)] transition-colors ease-in-out duration-300 text-sm"><MdWifiTethering />{desc}</h3>
         </div>
         <div>
-          <h1 className="!pb-2.5 font-semibold text-[var(--text-color)] transition-colors duration-300">Inclui:</h1>
-          <ul className="flex flex-col gap-2.5 text-[var(--card-other-text-plan)] transition-colors duration-300 text-sm">
+          <h1 className="!pb-2.5 font-semibold text-[var(--text-color)] transition-colors ease-in-out duration-300">Inclui:</h1>
+          <ul className="flex flex-col gap-2.5 text-[var(--card-other-text-plan)] transition-colors ease-in-out duration-300 text-sm">
             {listItems}
           </ul>
         </div>
-        <span className="card-price flex items-baseline text-[var(--card-other-text-plan)] transition-colors duration-300 font-bold !mt-auto">
-          R$<strong className="text-[var(--text-color)] transition-colors duration-300">{valor}</strong>/mês
+        <span className="card-price flex items-baseline text-[var(--card-other-text-plan)] transition-colors ease-in-out duration-300 font-bold !mt-auto">
+          R$<strong className="text-[var(--text-color)] transition-colors ease-in-out duration-300">{valor}</strong>/mês
         <Tooltip label="Lembre-se, a velocidade de conexão pode ter oscilações e variações conforme fatores externos, condições topográficas e/ou climáticas, movimento, distância e/ou número de clientes usando a mesma antena, do modo usado na conexão, das aplicações ou dos sites." style={{ "--tooltip-hover-x": "50%", "--tooltip-hover-y": "-8.75rem", "textShadow": "none" } as React.CSSProperties} p_arrow_tooltip="t-arrow-bottom" content_styleClass="!ml-1">
-          <IoMdInformationCircle className="text-[var(--text-color)] transition-colors duration-300 text-[1rem] cursor-help svg-outline" />
+          <IoMdInformationCircle className="text-[var(--text-color)] transition-colors ease-in-out duration-300 text-[1rem] cursor-help svg-outline" />
         </Tooltip>
         </span>
       </div>

@@ -16,7 +16,7 @@ export default function Plans() {
 
   return (
 
-    <section id="plans" className="bg-s flex justify-center w-full bg-[var(--bg-2)] text-[var(--text-color)] transition-colors duration-300">
+    <section id="plans" className="bg-s flex justify-center w-full bg-[var(--bg-2)] text-[var(--text-color)] transition-colors ease-in-out duration-300">
       <div className="w-full max-w-[1000px]">
         <div className="plans-content flex flex-col gap-10 w-full">
           <div className="w-full">
@@ -118,12 +118,12 @@ export default function Plans() {
                 </Card>
               </Suspense>
             </div>
-            <span className="md:hidden block relative text-sm text-[var(--card-other-text-plan)] transition-colors duration-300 w-fit !mt-[.5rem]">Arraste para ver mais planos
+            <span className="md:hidden block relative text-sm text-[var(--card-other-text-plan)] transition-colors ease-in-out duration-300 w-fit !mt-[.5rem]">Arraste para ver mais planos
             <FaArrowRight className="plans-arrow absolute right-[-1.75rem] top-0 transform-[translateY(-50%)]"/>
             </span>
           </div>
           <div>
-            <p className="text-justify hyphens-auto !leading-4.75">Ainda está em dúvida sobre qual plano contratar? Vá até a <a className="link text-[var(--link)] transition-colors duration-300" title="Ir até a secão de dúvidas." href="#doubts">seção de dúvidas</a>, ou contate a nossa equipe de suporte que está pronta para te ajudar a escolher a melhor opção para o seu perfil de uso. Fale conosco pelo WhatsApp ou entre em contato pelos nossos <a className="link text-[var(--link)] transition-colors duration-300" title="Ir até a secão de contato." href="#contact">canais de atendimento</a> — vamos tirar todas as suas dúvidas e garantir que você tenha a melhor experiência online.</p>
+            <p className="text-justify hyphens-auto !leading-4.75">Ainda está em dúvida sobre qual plano contratar? Vá até a <a className="link text-[var(--link)] transition-colors ease-in-out duration-300" title="Ir até a secão de dúvidas." href="#doubts">seção de dúvidas</a>, ou contate a nossa equipe de suporte que está pronta para te ajudar a escolher a melhor opção para o seu perfil de uso. Fale conosco pelo WhatsApp ou entre em contato pelos nossos <a className="link text-[var(--link)] transition-colors ease-in-out duration-300" title="Ir até a secão de contato." href="#contact">canais de atendimento</a> — vamos tirar todas as suas dúvidas e garantir que você tenha a melhor experiência online.</p>
           </div>
         </div>
       </div>
